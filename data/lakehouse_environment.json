@@ -1,0 +1,1615 @@
+{
+ "principals": {
+  "ben.kim": {
+   "name": "ben.kim",
+   "role": "analyst",
+   "team": "claims",
+   "is_external": false
+  },
+  "omar.smith": {
+   "name": "omar.smith",
+   "role": "analyst",
+   "team": "customer_care",
+   "is_external": false
+  },
+  "chen.reddy": {
+   "name": "chen.reddy",
+   "role": "analyst",
+   "team": "finance",
+   "is_external": false
+  },
+  "mateo.patel": {
+   "name": "mateo.patel",
+   "role": "analyst",
+   "team": "finance",
+   "is_external": false
+  },
+  "ben.ivanova": {
+   "name": "ben.ivanova",
+   "role": "analyst",
+   "team": "finance",
+   "is_external": false
+  },
+  "chen.nguyen": {
+   "name": "chen.nguyen",
+   "role": "analyst",
+   "team": "finance",
+   "is_external": false
+  },
+  "priya.okafor": {
+   "name": "priya.okafor",
+   "role": "analyst",
+   "team": "marketing",
+   "is_external": false
+  },
+  "emeka.garcia": {
+   "name": "emeka.garcia",
+   "role": "analyst",
+   "team": "finance",
+   "is_external": false
+  },
+  "victor.nguyen": {
+   "name": "victor.nguyen",
+   "role": "analyst",
+   "team": "marketing",
+   "is_external": false
+  },
+  "hana.patel": {
+   "name": "hana.patel",
+   "role": "analyst",
+   "team": "finance",
+   "is_external": false
+  },
+  "zara.smith": {
+   "name": "zara.smith",
+   "role": "analyst",
+   "team": "marketing",
+   "is_external": false
+  },
+  "ben.haddad": {
+   "name": "ben.haddad",
+   "role": "analyst",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "beatriz.reddy": {
+   "name": "beatriz.reddy",
+   "role": "analyst",
+   "team": "claims",
+   "is_external": false
+  },
+  "tariq.haddad": {
+   "name": "tariq.haddad",
+   "role": "analyst",
+   "team": "risk",
+   "is_external": false
+  },
+  "wen.okafor": {
+   "name": "wen.okafor",
+   "role": "data_scientist",
+   "team": "claims",
+   "is_external": false
+  },
+  "kofi.patel": {
+   "name": "kofi.patel",
+   "role": "data_scientist",
+   "team": "claims",
+   "is_external": false
+  },
+  "rahul.okafor": {
+   "name": "rahul.okafor",
+   "role": "data_scientist",
+   "team": "risk",
+   "is_external": false
+  },
+  "nadia.kim": {
+   "name": "nadia.kim",
+   "role": "data_scientist",
+   "team": "finance",
+   "is_external": false
+  },
+  "uma.rossi": {
+   "name": "uma.rossi",
+   "role": "data_scientist",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "mateo.silva": {
+   "name": "mateo.silva",
+   "role": "data_scientist",
+   "team": "marketing",
+   "is_external": false
+  },
+  "ben.rossi": {
+   "name": "ben.rossi",
+   "role": "data_scientist",
+   "team": "claims",
+   "is_external": false
+  },
+  "priya.smith": {
+   "name": "priya.smith",
+   "role": "data_scientist",
+   "team": "customer_care",
+   "is_external": false
+  },
+  "farah.tanaka": {
+   "name": "farah.tanaka",
+   "role": "data_engineer",
+   "team": "customer_care",
+   "is_external": false
+  },
+  "nadia.ivanova": {
+   "name": "nadia.ivanova",
+   "role": "data_engineer",
+   "team": "claims",
+   "is_external": false
+  },
+  "jia.smith": {
+   "name": "jia.smith",
+   "role": "data_engineer",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "arjun.reddy": {
+   "name": "arjun.reddy",
+   "role": "data_engineer",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "chen.okafor": {
+   "name": "chen.okafor",
+   "role": "data_engineer",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "farah.patel": {
+   "name": "farah.patel",
+   "role": "data_engineer",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "beatriz.nguyen": {
+   "name": "beatriz.nguyen",
+   "role": "data_engineer",
+   "team": "risk",
+   "is_external": false
+  },
+  "arjun.rossi": {
+   "name": "arjun.rossi",
+   "role": "data_engineer",
+   "team": "risk",
+   "is_external": false
+  },
+  "mateo.nguyen": {
+   "name": "mateo.nguyen",
+   "role": "data_engineer",
+   "team": "claims",
+   "is_external": false
+  },
+  "hana.kim": {
+   "name": "hana.kim",
+   "role": "data_engineer",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "elena.haddad": {
+   "name": "elena.haddad",
+   "role": "data_engineer",
+   "team": "claims",
+   "is_external": false
+  },
+  "beatriz.okafor": {
+   "name": "beatriz.okafor",
+   "role": "data_engineer",
+   "team": "risk",
+   "is_external": false
+  },
+  "carlos.cohen": {
+   "name": "carlos.cohen",
+   "role": "data_engineer",
+   "team": "customer_care",
+   "is_external": false
+  },
+  "omar.silva": {
+   "name": "omar.silva",
+   "role": "data_engineer",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "emeka.rossi": {
+   "name": "emeka.rossi",
+   "role": "platform_admin",
+   "team": "platform",
+   "is_external": false
+  },
+  "nadia.rossi": {
+   "name": "nadia.rossi",
+   "role": "platform_admin",
+   "team": "platform",
+   "is_external": false
+  },
+  "lucia.lopez": {
+   "name": "lucia.lopez",
+   "role": "platform_admin",
+   "team": "platform",
+   "is_external": false
+  },
+  "ivan.cohen": {
+   "name": "ivan.cohen",
+   "role": "platform_admin",
+   "team": "platform",
+   "is_external": false
+  },
+  "farah.nguyen": {
+   "name": "farah.nguyen",
+   "role": "contractor",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "mateo.okafor": {
+   "name": "mateo.okafor",
+   "role": "contractor",
+   "team": "finance",
+   "is_external": false
+  },
+  "jia.muller": {
+   "name": "jia.muller",
+   "role": "contractor",
+   "team": "risk",
+   "is_external": false
+  },
+  "nadia.haddad": {
+   "name": "nadia.haddad",
+   "role": "contractor",
+   "team": "customer_care",
+   "is_external": false
+  },
+  "ivan.reddy": {
+   "name": "ivan.reddy",
+   "role": "contractor",
+   "team": "marketing",
+   "is_external": false
+  },
+  "jia.patel": {
+   "name": "jia.patel",
+   "role": "contractor",
+   "team": "claims",
+   "is_external": false
+  },
+  "wen@partner-data.com": {
+   "name": "wen@partner-data.com",
+   "role": "contractor",
+   "team": "supply_chain",
+   "is_external": true
+  },
+  "tariq@partner-analytics.com": {
+   "name": "tariq@partner-analytics.com",
+   "role": "contractor",
+   "team": "marketing",
+   "is_external": true
+  },
+  "deepa@partner-data.com": {
+   "name": "deepa@partner-data.com",
+   "role": "contractor",
+   "team": "marketing",
+   "is_external": true
+  },
+  "omar@partner-consulting.com": {
+   "name": "omar@partner-consulting.com",
+   "role": "contractor",
+   "team": "customer_care",
+   "is_external": true
+  },
+  "sp-finance-etl": {
+   "name": "sp-finance-etl",
+   "role": "service_principal",
+   "team": "finance",
+   "is_external": false
+  },
+  "sp-claims-etl": {
+   "name": "sp-claims-etl",
+   "role": "service_principal",
+   "team": "claims",
+   "is_external": false
+  },
+  "sp-marketing-etl": {
+   "name": "sp-marketing-etl",
+   "role": "service_principal",
+   "team": "marketing",
+   "is_external": false
+  },
+  "sp-supply-chain-etl": {
+   "name": "sp-supply-chain-etl",
+   "role": "service_principal",
+   "team": "supply_chain",
+   "is_external": false
+  },
+  "sp-customer-care-etl": {
+   "name": "sp-customer-care-etl",
+   "role": "service_principal",
+   "team": "customer_care",
+   "is_external": false
+  },
+  "sp-risk-etl": {
+   "name": "sp-risk-etl",
+   "role": "service_principal",
+   "team": "risk",
+   "is_external": false
+  }
+ },
+ "tables": {
+  "prod_finance.accounting.general_ledger": {
+   "full_name": "prod_finance.accounting.general_ledger",
+   "env": "prod",
+   "classification": "confidential",
+   "owner_team": "finance",
+   "size_gb": 46,
+   "comment": ""
+  },
+  "prod_finance.accounting.invoices": {
+   "full_name": "prod_finance.accounting.invoices",
+   "env": "prod",
+   "classification": "confidential",
+   "owner_team": "finance",
+   "size_gb": 170,
+   "comment": ""
+  },
+  "prod_finance.accounting.cost_centers": {
+   "full_name": "prod_finance.accounting.cost_centers",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "finance",
+   "size_gb": 67,
+   "comment": ""
+  },
+  "prod_finance.accounting.payroll_summary": {
+   "full_name": "prod_finance.accounting.payroll_summary",
+   "env": "prod",
+   "classification": "restricted",
+   "owner_team": "finance",
+   "size_gb": 478,
+   "comment": ""
+  },
+  "prod_finance.accounting.fx_rates": {
+   "full_name": "prod_finance.accounting.fx_rates",
+   "env": "prod",
+   "classification": "public",
+   "owner_team": "finance",
+   "size_gb": 87,
+   "comment": ""
+  },
+  "staging_finance.accounting.cost_centers": {
+   "full_name": "staging_finance.accounting.cost_centers",
+   "env": "staging",
+   "classification": "internal",
+   "owner_team": "finance",
+   "size_gb": 53,
+   "comment": ""
+  },
+  "staging_finance.accounting.payroll_summary": {
+   "full_name": "staging_finance.accounting.payroll_summary",
+   "env": "staging",
+   "classification": "restricted",
+   "owner_team": "finance",
+   "size_gb": 425,
+   "comment": ""
+  },
+  "dev_finance.accounting.general_ledger": {
+   "full_name": "dev_finance.accounting.general_ledger",
+   "env": "dev",
+   "classification": "confidential",
+   "owner_team": "finance",
+   "size_gb": 37,
+   "comment": ""
+  },
+  "dev_finance.accounting.cost_centers": {
+   "full_name": "dev_finance.accounting.cost_centers",
+   "env": "dev",
+   "classification": "internal",
+   "owner_team": "finance",
+   "size_gb": 5,
+   "comment": ""
+  },
+  "dev_finance.accounting.payroll_summary": {
+   "full_name": "dev_finance.accounting.payroll_summary",
+   "env": "dev",
+   "classification": "restricted",
+   "owner_team": "finance",
+   "size_gb": 246,
+   "comment": ""
+  },
+  "dev_finance.accounting.fx_rates": {
+   "full_name": "dev_finance.accounting.fx_rates",
+   "env": "dev",
+   "classification": "public",
+   "owner_team": "finance",
+   "size_gb": 13,
+   "comment": ""
+  },
+  "prod_claims.member.member_eligibility": {
+   "full_name": "prod_claims.member.member_eligibility",
+   "env": "prod",
+   "classification": "restricted",
+   "owner_team": "claims",
+   "size_gb": 34,
+   "comment": ""
+  },
+  "prod_claims.member.claim_lines": {
+   "full_name": "prod_claims.member.claim_lines",
+   "env": "prod",
+   "classification": "restricted",
+   "owner_team": "claims",
+   "size_gb": 2,
+   "comment": ""
+  },
+  "prod_claims.member.provider_directory": {
+   "full_name": "prod_claims.member.provider_directory",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "claims",
+   "size_gb": 56,
+   "comment": ""
+  },
+  "prod_claims.member.claim_status_daily": {
+   "full_name": "prod_claims.member.claim_status_daily",
+   "env": "prod",
+   "classification": "confidential",
+   "owner_team": "claims",
+   "size_gb": 15,
+   "comment": ""
+  },
+  "prod_claims.member.diagnosis_codes": {
+   "full_name": "prod_claims.member.diagnosis_codes",
+   "env": "prod",
+   "classification": "public",
+   "owner_team": "claims",
+   "size_gb": 16,
+   "comment": ""
+  },
+  "staging_claims.member.claim_status_daily": {
+   "full_name": "staging_claims.member.claim_status_daily",
+   "env": "staging",
+   "classification": "confidential",
+   "owner_team": "claims",
+   "size_gb": 51,
+   "comment": ""
+  },
+  "dev_claims.member.member_eligibility": {
+   "full_name": "dev_claims.member.member_eligibility",
+   "env": "dev",
+   "classification": "restricted",
+   "owner_team": "claims",
+   "size_gb": 23,
+   "comment": ""
+  },
+  "dev_claims.member.diagnosis_codes": {
+   "full_name": "dev_claims.member.diagnosis_codes",
+   "env": "dev",
+   "classification": "public",
+   "owner_team": "claims",
+   "size_gb": 185,
+   "comment": ""
+  },
+  "prod_marketing.engagement.campaign_events": {
+   "full_name": "prod_marketing.engagement.campaign_events",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "marketing",
+   "size_gb": 81,
+   "comment": ""
+  },
+  "prod_marketing.engagement.web_sessions": {
+   "full_name": "prod_marketing.engagement.web_sessions",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "marketing",
+   "size_gb": 50,
+   "comment": ""
+  },
+  "prod_marketing.engagement.customer_profiles": {
+   "full_name": "prod_marketing.engagement.customer_profiles",
+   "env": "prod",
+   "classification": "restricted",
+   "owner_team": "marketing",
+   "size_gb": 5,
+   "comment": ""
+  },
+  "prod_marketing.engagement.email_engagement": {
+   "full_name": "prod_marketing.engagement.email_engagement",
+   "env": "prod",
+   "classification": "confidential",
+   "owner_team": "marketing",
+   "size_gb": 17,
+   "comment": ""
+  },
+  "prod_marketing.engagement.ad_spend": {
+   "full_name": "prod_marketing.engagement.ad_spend",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "marketing",
+   "size_gb": 54,
+   "comment": ""
+  },
+  "staging_marketing.engagement.campaign_events": {
+   "full_name": "staging_marketing.engagement.campaign_events",
+   "env": "staging",
+   "classification": "internal",
+   "owner_team": "marketing",
+   "size_gb": 53,
+   "comment": ""
+  },
+  "staging_marketing.engagement.web_sessions": {
+   "full_name": "staging_marketing.engagement.web_sessions",
+   "env": "staging",
+   "classification": "internal",
+   "owner_team": "marketing",
+   "size_gb": 41,
+   "comment": ""
+  },
+  "staging_marketing.engagement.customer_profiles": {
+   "full_name": "staging_marketing.engagement.customer_profiles",
+   "env": "staging",
+   "classification": "restricted",
+   "owner_team": "marketing",
+   "size_gb": 8,
+   "comment": ""
+  },
+  "staging_marketing.engagement.ad_spend": {
+   "full_name": "staging_marketing.engagement.ad_spend",
+   "env": "staging",
+   "classification": "internal",
+   "owner_team": "marketing",
+   "size_gb": 45,
+   "comment": ""
+  },
+  "dev_marketing.engagement.web_sessions": {
+   "full_name": "dev_marketing.engagement.web_sessions",
+   "env": "dev",
+   "classification": "internal",
+   "owner_team": "marketing",
+   "size_gb": 410,
+   "comment": ""
+  },
+  "dev_marketing.engagement.customer_profiles": {
+   "full_name": "dev_marketing.engagement.customer_profiles",
+   "env": "dev",
+   "classification": "restricted",
+   "owner_team": "marketing",
+   "size_gb": 83,
+   "comment": ""
+  },
+  "dev_marketing.engagement.email_engagement": {
+   "full_name": "dev_marketing.engagement.email_engagement",
+   "env": "dev",
+   "classification": "confidential",
+   "owner_team": "marketing",
+   "size_gb": 27,
+   "comment": ""
+  },
+  "dev_marketing.engagement.ad_spend": {
+   "full_name": "dev_marketing.engagement.ad_spend",
+   "env": "dev",
+   "classification": "internal",
+   "owner_team": "marketing",
+   "size_gb": 86,
+   "comment": ""
+  },
+  "prod_supply_chain.logistics.shipments": {
+   "full_name": "prod_supply_chain.logistics.shipments",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "supply_chain",
+   "size_gb": 48,
+   "comment": ""
+  },
+  "prod_supply_chain.logistics.inventory_snapshots": {
+   "full_name": "prod_supply_chain.logistics.inventory_snapshots",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "supply_chain",
+   "size_gb": 213,
+   "comment": ""
+  },
+  "prod_supply_chain.logistics.supplier_contracts": {
+   "full_name": "prod_supply_chain.logistics.supplier_contracts",
+   "env": "prod",
+   "classification": "confidential",
+   "owner_team": "supply_chain",
+   "size_gb": 21,
+   "comment": ""
+  },
+  "prod_supply_chain.logistics.warehouse_locations": {
+   "full_name": "prod_supply_chain.logistics.warehouse_locations",
+   "env": "prod",
+   "classification": "public",
+   "owner_team": "supply_chain",
+   "size_gb": 40,
+   "comment": ""
+  },
+  "prod_supply_chain.logistics.purchase_orders": {
+   "full_name": "prod_supply_chain.logistics.purchase_orders",
+   "env": "prod",
+   "classification": "confidential",
+   "owner_team": "supply_chain",
+   "size_gb": 35,
+   "comment": ""
+  },
+  "staging_supply_chain.logistics.inventory_snapshots": {
+   "full_name": "staging_supply_chain.logistics.inventory_snapshots",
+   "env": "staging",
+   "classification": "internal",
+   "owner_team": "supply_chain",
+   "size_gb": 16,
+   "comment": ""
+  },
+  "staging_supply_chain.logistics.supplier_contracts": {
+   "full_name": "staging_supply_chain.logistics.supplier_contracts",
+   "env": "staging",
+   "classification": "confidential",
+   "owner_team": "supply_chain",
+   "size_gb": 6,
+   "comment": ""
+  },
+  "staging_supply_chain.logistics.warehouse_locations": {
+   "full_name": "staging_supply_chain.logistics.warehouse_locations",
+   "env": "staging",
+   "classification": "public",
+   "owner_team": "supply_chain",
+   "size_gb": 54,
+   "comment": ""
+  },
+  "dev_supply_chain.logistics.inventory_snapshots": {
+   "full_name": "dev_supply_chain.logistics.inventory_snapshots",
+   "env": "dev",
+   "classification": "internal",
+   "owner_team": "supply_chain",
+   "size_gb": 110,
+   "comment": ""
+  },
+  "dev_supply_chain.logistics.supplier_contracts": {
+   "full_name": "dev_supply_chain.logistics.supplier_contracts",
+   "env": "dev",
+   "classification": "confidential",
+   "owner_team": "supply_chain",
+   "size_gb": 660,
+   "comment": ""
+  },
+  "dev_supply_chain.logistics.warehouse_locations": {
+   "full_name": "dev_supply_chain.logistics.warehouse_locations",
+   "env": "dev",
+   "classification": "public",
+   "owner_team": "supply_chain",
+   "size_gb": 72,
+   "comment": ""
+  },
+  "dev_supply_chain.logistics.purchase_orders": {
+   "full_name": "dev_supply_chain.logistics.purchase_orders",
+   "env": "dev",
+   "classification": "confidential",
+   "owner_team": "supply_chain",
+   "size_gb": 447,
+   "comment": ""
+  },
+  "prod_customer_care.support.support_tickets": {
+   "full_name": "prod_customer_care.support.support_tickets",
+   "env": "prod",
+   "classification": "confidential",
+   "owner_team": "customer_care",
+   "size_gb": 103,
+   "comment": ""
+  },
+  "prod_customer_care.support.call_transcripts": {
+   "full_name": "prod_customer_care.support.call_transcripts",
+   "env": "prod",
+   "classification": "restricted",
+   "owner_team": "customer_care",
+   "size_gb": 5,
+   "comment": ""
+  },
+  "prod_customer_care.support.csat_scores": {
+   "full_name": "prod_customer_care.support.csat_scores",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "customer_care",
+   "size_gb": 77,
+   "comment": ""
+  },
+  "prod_customer_care.support.agent_schedules": {
+   "full_name": "prod_customer_care.support.agent_schedules",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "customer_care",
+   "size_gb": 34,
+   "comment": ""
+  },
+  "prod_customer_care.support.knowledge_articles": {
+   "full_name": "prod_customer_care.support.knowledge_articles",
+   "env": "prod",
+   "classification": "public",
+   "owner_team": "customer_care",
+   "size_gb": 534,
+   "comment": ""
+  },
+  "staging_customer_care.support.support_tickets": {
+   "full_name": "staging_customer_care.support.support_tickets",
+   "env": "staging",
+   "classification": "confidential",
+   "owner_team": "customer_care",
+   "size_gb": 53,
+   "comment": ""
+  },
+  "staging_customer_care.support.call_transcripts": {
+   "full_name": "staging_customer_care.support.call_transcripts",
+   "env": "staging",
+   "classification": "restricted",
+   "owner_team": "customer_care",
+   "size_gb": 44,
+   "comment": ""
+  },
+  "staging_customer_care.support.agent_schedules": {
+   "full_name": "staging_customer_care.support.agent_schedules",
+   "env": "staging",
+   "classification": "internal",
+   "owner_team": "customer_care",
+   "size_gb": 7,
+   "comment": ""
+  },
+  "staging_customer_care.support.knowledge_articles": {
+   "full_name": "staging_customer_care.support.knowledge_articles",
+   "env": "staging",
+   "classification": "public",
+   "owner_team": "customer_care",
+   "size_gb": 13,
+   "comment": ""
+  },
+  "dev_customer_care.support.call_transcripts": {
+   "full_name": "dev_customer_care.support.call_transcripts",
+   "env": "dev",
+   "classification": "restricted",
+   "owner_team": "customer_care",
+   "size_gb": 20,
+   "comment": ""
+  },
+  "dev_customer_care.support.agent_schedules": {
+   "full_name": "dev_customer_care.support.agent_schedules",
+   "env": "dev",
+   "classification": "internal",
+   "owner_team": "customer_care",
+   "size_gb": 192,
+   "comment": ""
+  },
+  "dev_customer_care.support.knowledge_articles": {
+   "full_name": "dev_customer_care.support.knowledge_articles",
+   "env": "dev",
+   "classification": "public",
+   "owner_team": "customer_care",
+   "size_gb": 10,
+   "comment": ""
+  },
+  "prod_risk.controls.fraud_scores": {
+   "full_name": "prod_risk.controls.fraud_scores",
+   "env": "prod",
+   "classification": "restricted",
+   "owner_team": "risk",
+   "size_gb": 65,
+   "comment": ""
+  },
+  "prod_risk.controls.credit_limits": {
+   "full_name": "prod_risk.controls.credit_limits",
+   "env": "prod",
+   "classification": "confidential",
+   "owner_team": "risk",
+   "size_gb": 709,
+   "comment": ""
+  },
+  "prod_risk.controls.audit_findings": {
+   "full_name": "prod_risk.controls.audit_findings",
+   "env": "prod",
+   "classification": "confidential",
+   "owner_team": "risk",
+   "size_gb": 87,
+   "comment": ""
+  },
+  "prod_risk.controls.sanctions_screening": {
+   "full_name": "prod_risk.controls.sanctions_screening",
+   "env": "prod",
+   "classification": "restricted",
+   "owner_team": "risk",
+   "size_gb": 63,
+   "comment": ""
+  },
+  "prod_risk.controls.risk_appetite_metrics": {
+   "full_name": "prod_risk.controls.risk_appetite_metrics",
+   "env": "prod",
+   "classification": "internal",
+   "owner_team": "risk",
+   "size_gb": 68,
+   "comment": ""
+  },
+  "staging_risk.controls.fraud_scores": {
+   "full_name": "staging_risk.controls.fraud_scores",
+   "env": "staging",
+   "classification": "restricted",
+   "owner_team": "risk",
+   "size_gb": 56,
+   "comment": ""
+  },
+  "staging_risk.controls.audit_findings": {
+   "full_name": "staging_risk.controls.audit_findings",
+   "env": "staging",
+   "classification": "confidential",
+   "owner_team": "risk",
+   "size_gb": 193,
+   "comment": ""
+  },
+  "staging_risk.controls.sanctions_screening": {
+   "full_name": "staging_risk.controls.sanctions_screening",
+   "env": "staging",
+   "classification": "restricted",
+   "owner_team": "risk",
+   "size_gb": 17,
+   "comment": ""
+  },
+  "dev_risk.controls.credit_limits": {
+   "full_name": "dev_risk.controls.credit_limits",
+   "env": "dev",
+   "classification": "confidential",
+   "owner_team": "risk",
+   "size_gb": 27,
+   "comment": ""
+  },
+  "dev_risk.controls.audit_findings": {
+   "full_name": "dev_risk.controls.audit_findings",
+   "env": "dev",
+   "classification": "confidential",
+   "owner_team": "risk",
+   "size_gb": 351,
+   "comment": ""
+  },
+  "dev_risk.controls.sanctions_screening": {
+   "full_name": "dev_risk.controls.sanctions_screening",
+   "env": "dev",
+   "classification": "restricted",
+   "owner_team": "risk",
+   "size_gb": 7,
+   "comment": ""
+  }
+ },
+ "clusters": {
+  "prod-finance-analytics": {
+   "name": "prod-finance-analytics",
+   "env": "prod",
+   "owner_team": "finance",
+   "current_workers": 27,
+   "policy_max_workers": 64
+  },
+  "prod-claims-ml": {
+   "name": "prod-claims-ml",
+   "env": "prod",
+   "owner_team": "claims",
+   "current_workers": 32,
+   "policy_max_workers": 64
+  },
+  "prod-marketing-etl": {
+   "name": "prod-marketing-etl",
+   "env": "prod",
+   "owner_team": "marketing",
+   "current_workers": 18,
+   "policy_max_workers": 64
+  },
+  "prod-supply-chain-etl": {
+   "name": "prod-supply-chain-etl",
+   "env": "prod",
+   "owner_team": "supply_chain",
+   "current_workers": 16,
+   "policy_max_workers": 64
+  },
+  "prod-customer-care-etl": {
+   "name": "prod-customer-care-etl",
+   "env": "prod",
+   "owner_team": "customer_care",
+   "current_workers": 25,
+   "policy_max_workers": 64
+  },
+  "prod-risk-analytics": {
+   "name": "prod-risk-analytics",
+   "env": "prod",
+   "owner_team": "risk",
+   "current_workers": 8,
+   "policy_max_workers": 64
+  },
+  "staging-finance-analytics": {
+   "name": "staging-finance-analytics",
+   "env": "staging",
+   "owner_team": "finance",
+   "current_workers": 4,
+   "policy_max_workers": 16
+  },
+  "staging-marketing-etl": {
+   "name": "staging-marketing-etl",
+   "env": "staging",
+   "owner_team": "marketing",
+   "current_workers": 7,
+   "policy_max_workers": 16
+  },
+  "dev-finance-analytics": {
+   "name": "dev-finance-analytics",
+   "env": "dev",
+   "owner_team": "finance",
+   "current_workers": 3,
+   "policy_max_workers": 8
+  },
+  "dev-claims-ml": {
+   "name": "dev-claims-ml",
+   "env": "dev",
+   "owner_team": "claims",
+   "current_workers": 2,
+   "policy_max_workers": 8
+  },
+  "dev-marketing-ml": {
+   "name": "dev-marketing-ml",
+   "env": "dev",
+   "owner_team": "marketing",
+   "current_workers": 4,
+   "policy_max_workers": 8
+  },
+  "dev-supply-chain-etl": {
+   "name": "dev-supply-chain-etl",
+   "env": "dev",
+   "owner_team": "supply_chain",
+   "current_workers": 2,
+   "policy_max_workers": 8
+  },
+  "dev-customer-care-ml": {
+   "name": "dev-customer-care-ml",
+   "env": "dev",
+   "owner_team": "customer_care",
+   "current_workers": 4,
+   "policy_max_workers": 8
+  },
+  "dev-risk-ml": {
+   "name": "dev-risk-ml",
+   "env": "dev",
+   "owner_team": "risk",
+   "current_workers": 2,
+   "policy_max_workers": 8
+  }
+ },
+ "secrets": {
+  "prod/finance/storage-sas-token": {
+   "name": "prod/finance/storage-sas-token",
+   "env": "prod",
+   "owner_team": "finance"
+  },
+  "prod/claims/db-password": {
+   "name": "prod/claims/db-password",
+   "env": "prod",
+   "owner_team": "claims"
+  },
+  "prod/claims/storage-sas-token": {
+   "name": "prod/claims/storage-sas-token",
+   "env": "prod",
+   "owner_team": "claims"
+  },
+  "prod/marketing/db-password": {
+   "name": "prod/marketing/db-password",
+   "env": "prod",
+   "owner_team": "marketing"
+  },
+  "prod/marketing/api-key": {
+   "name": "prod/marketing/api-key",
+   "env": "prod",
+   "owner_team": "marketing"
+  },
+  "prod/marketing/storage-sas-token": {
+   "name": "prod/marketing/storage-sas-token",
+   "env": "prod",
+   "owner_team": "marketing"
+  },
+  "prod/supply-chain/storage-sas-token": {
+   "name": "prod/supply-chain/storage-sas-token",
+   "env": "prod",
+   "owner_team": "supply_chain"
+  },
+  "prod/customer-care/api-key": {
+   "name": "prod/customer-care/api-key",
+   "env": "prod",
+   "owner_team": "customer_care"
+  },
+  "prod/platform/api-key": {
+   "name": "prod/platform/api-key",
+   "env": "prod",
+   "owner_team": "platform"
+  },
+  "prod/platform/storage-sas-token": {
+   "name": "prod/platform/storage-sas-token",
+   "env": "prod",
+   "owner_team": "platform"
+  },
+  "prod/risk/api-key": {
+   "name": "prod/risk/api-key",
+   "env": "prod",
+   "owner_team": "risk"
+  },
+  "prod/risk/storage-sas-token": {
+   "name": "prod/risk/storage-sas-token",
+   "env": "prod",
+   "owner_team": "risk"
+  },
+  "dev/finance/db-password": {
+   "name": "dev/finance/db-password",
+   "env": "dev",
+   "owner_team": "finance"
+  },
+  "dev/finance/api-key": {
+   "name": "dev/finance/api-key",
+   "env": "dev",
+   "owner_team": "finance"
+  },
+  "dev/claims/db-password": {
+   "name": "dev/claims/db-password",
+   "env": "dev",
+   "owner_team": "claims"
+  },
+  "dev/claims/storage-sas-token": {
+   "name": "dev/claims/storage-sas-token",
+   "env": "dev",
+   "owner_team": "claims"
+  },
+  "dev/marketing/db-password": {
+   "name": "dev/marketing/db-password",
+   "env": "dev",
+   "owner_team": "marketing"
+  },
+  "dev/marketing/storage-sas-token": {
+   "name": "dev/marketing/storage-sas-token",
+   "env": "dev",
+   "owner_team": "marketing"
+  },
+  "dev/supply-chain/api-key": {
+   "name": "dev/supply-chain/api-key",
+   "env": "dev",
+   "owner_team": "supply_chain"
+  },
+  "dev/supply-chain/storage-sas-token": {
+   "name": "dev/supply-chain/storage-sas-token",
+   "env": "dev",
+   "owner_team": "supply_chain"
+  },
+  "dev/customer-care/api-key": {
+   "name": "dev/customer-care/api-key",
+   "env": "dev",
+   "owner_team": "customer_care"
+  },
+  "dev/customer-care/storage-sas-token": {
+   "name": "dev/customer-care/storage-sas-token",
+   "env": "dev",
+   "owner_team": "customer_care"
+  },
+  "dev/platform/storage-sas-token": {
+   "name": "dev/platform/storage-sas-token",
+   "env": "dev",
+   "owner_team": "platform"
+  }
+ },
+ "jobs": {
+  "prod_finance_hourly_refresh": {
+   "name": "prod_finance_hourly_refresh",
+   "env": "prod",
+   "owner_team": "finance",
+   "schedule": "0 * * * *"
+  },
+  "prod_finance_daily_ingest": {
+   "name": "prod_finance_daily_ingest",
+   "env": "prod",
+   "owner_team": "finance",
+   "schedule": "0 * * * *"
+  },
+  "prod_claims_hourly_refresh": {
+   "name": "prod_claims_hourly_refresh",
+   "env": "prod",
+   "owner_team": "claims",
+   "schedule": "0 2 * * *"
+  },
+  "prod_claims_feature_build": {
+   "name": "prod_claims_feature_build",
+   "env": "prod",
+   "owner_team": "claims",
+   "schedule": "0 * * * *"
+  },
+  "prod_marketing_cdc_merge": {
+   "name": "prod_marketing_cdc_merge",
+   "env": "prod",
+   "owner_team": "marketing",
+   "schedule": "0 6 * * 1"
+  },
+  "prod_marketing_hourly_refresh": {
+   "name": "prod_marketing_hourly_refresh",
+   "env": "prod",
+   "owner_team": "marketing",
+   "schedule": "0 * * * *"
+  },
+  "prod_supply_chain_cdc_merge": {
+   "name": "prod_supply_chain_cdc_merge",
+   "env": "prod",
+   "owner_team": "supply_chain",
+   "schedule": "0 2 * * *"
+  },
+  "prod_supply_chain_daily_ingest": {
+   "name": "prod_supply_chain_daily_ingest",
+   "env": "prod",
+   "owner_team": "supply_chain",
+   "schedule": "0 2 * * *"
+  },
+  "prod_customer_care_hourly_refresh": {
+   "name": "prod_customer_care_hourly_refresh",
+   "env": "prod",
+   "owner_team": "customer_care",
+   "schedule": "0 * * * *"
+  },
+  "prod_customer_care_feature_build": {
+   "name": "prod_customer_care_feature_build",
+   "env": "prod",
+   "owner_team": "customer_care",
+   "schedule": "0 6 * * 1"
+  },
+  "prod_risk_weekly_rollup": {
+   "name": "prod_risk_weekly_rollup",
+   "env": "prod",
+   "owner_team": "risk",
+   "schedule": "0 * * * *"
+  },
+  "prod_risk_feature_build": {
+   "name": "prod_risk_feature_build",
+   "env": "prod",
+   "owner_team": "risk",
+   "schedule": "0 6 * * 1"
+  },
+  "dev_finance_weekly_rollup": {
+   "name": "dev_finance_weekly_rollup",
+   "env": "dev",
+   "owner_team": "finance",
+   "schedule": "0 * * * *"
+  },
+  "dev_finance_cdc_merge": {
+   "name": "dev_finance_cdc_merge",
+   "env": "dev",
+   "owner_team": "finance",
+   "schedule": "0 2 * * *"
+  },
+  "dev_claims_feature_build": {
+   "name": "dev_claims_feature_build",
+   "env": "dev",
+   "owner_team": "claims",
+   "schedule": "0 6 * * 1"
+  },
+  "dev_claims_cdc_merge": {
+   "name": "dev_claims_cdc_merge",
+   "env": "dev",
+   "owner_team": "claims",
+   "schedule": "0 2 * * *"
+  },
+  "dev_marketing_feature_build": {
+   "name": "dev_marketing_feature_build",
+   "env": "dev",
+   "owner_team": "marketing",
+   "schedule": "0 6 * * 1"
+  },
+  "dev_marketing_weekly_rollup": {
+   "name": "dev_marketing_weekly_rollup",
+   "env": "dev",
+   "owner_team": "marketing",
+   "schedule": "0 6 * * 1"
+  },
+  "dev_supply_chain_hourly_refresh": {
+   "name": "dev_supply_chain_hourly_refresh",
+   "env": "dev",
+   "owner_team": "supply_chain",
+   "schedule": "0 2 * * *"
+  },
+  "dev_supply_chain_daily_ingest": {
+   "name": "dev_supply_chain_daily_ingest",
+   "env": "dev",
+   "owner_team": "supply_chain",
+   "schedule": "0 * * * *"
+  },
+  "dev_customer_care_hourly_refresh": {
+   "name": "dev_customer_care_hourly_refresh",
+   "env": "dev",
+   "owner_team": "customer_care",
+   "schedule": "0 * * * *"
+  },
+  "dev_customer_care_weekly_rollup": {
+   "name": "dev_customer_care_weekly_rollup",
+   "env": "dev",
+   "owner_team": "customer_care",
+   "schedule": "0 6 * * 1"
+  },
+  "dev_risk_daily_ingest": {
+   "name": "dev_risk_daily_ingest",
+   "env": "dev",
+   "owner_team": "risk",
+   "schedule": "0 * * * *"
+  },
+  "dev_risk_feature_build": {
+   "name": "dev_risk_feature_build",
+   "env": "dev",
+   "owner_team": "risk",
+   "schedule": "0 2 * * *"
+  }
+ },
+ "topics": {
+  "prod.finance.events": {
+   "name": "prod.finance.events",
+   "env": "prod",
+   "owner_team": "finance",
+   "retention_hours": 720,
+   "consumer_groups": 1
+  },
+  "prod.finance.clickstream": {
+   "name": "prod.finance.clickstream",
+   "env": "prod",
+   "owner_team": "finance",
+   "retention_hours": 72,
+   "consumer_groups": 3
+  },
+  "prod.claims.transactions": {
+   "name": "prod.claims.transactions",
+   "env": "prod",
+   "owner_team": "claims",
+   "retention_hours": 168,
+   "consumer_groups": 3
+  },
+  "prod.claims.clickstream": {
+   "name": "prod.claims.clickstream",
+   "env": "prod",
+   "owner_team": "claims",
+   "retention_hours": 720,
+   "consumer_groups": 3
+  },
+  "prod.marketing.alerts": {
+   "name": "prod.marketing.alerts",
+   "env": "prod",
+   "owner_team": "marketing",
+   "retention_hours": 72,
+   "consumer_groups": 3
+  },
+  "prod.marketing.cdc": {
+   "name": "prod.marketing.cdc",
+   "env": "prod",
+   "owner_team": "marketing",
+   "retention_hours": 336,
+   "consumer_groups": 4
+  },
+  "prod.supply-chain.cdc": {
+   "name": "prod.supply-chain.cdc",
+   "env": "prod",
+   "owner_team": "supply_chain",
+   "retention_hours": 168,
+   "consumer_groups": 6
+  },
+  "prod.supply-chain.clickstream": {
+   "name": "prod.supply-chain.clickstream",
+   "env": "prod",
+   "owner_team": "supply_chain",
+   "retention_hours": 72,
+   "consumer_groups": 3
+  },
+  "prod.customer-care.transactions": {
+   "name": "prod.customer-care.transactions",
+   "env": "prod",
+   "owner_team": "customer_care",
+   "retention_hours": 72,
+   "consumer_groups": 1
+  },
+  "prod.customer-care.alerts": {
+   "name": "prod.customer-care.alerts",
+   "env": "prod",
+   "owner_team": "customer_care",
+   "retention_hours": 72,
+   "consumer_groups": 1
+  },
+  "prod.risk.transactions": {
+   "name": "prod.risk.transactions",
+   "env": "prod",
+   "owner_team": "risk",
+   "retention_hours": 720,
+   "consumer_groups": 4
+  },
+  "prod.risk.events": {
+   "name": "prod.risk.events",
+   "env": "prod",
+   "owner_team": "risk",
+   "retention_hours": 720,
+   "consumer_groups": 1
+  },
+  "dev.finance.alerts": {
+   "name": "dev.finance.alerts",
+   "env": "dev",
+   "owner_team": "finance",
+   "retention_hours": 72,
+   "consumer_groups": 1
+  },
+  "dev.finance.cdc": {
+   "name": "dev.finance.cdc",
+   "env": "dev",
+   "owner_team": "finance",
+   "retention_hours": 720,
+   "consumer_groups": 6
+  },
+  "dev.claims.transactions": {
+   "name": "dev.claims.transactions",
+   "env": "dev",
+   "owner_team": "claims",
+   "retention_hours": 72,
+   "consumer_groups": 3
+  },
+  "dev.claims.cdc": {
+   "name": "dev.claims.cdc",
+   "env": "dev",
+   "owner_team": "claims",
+   "retention_hours": 72,
+   "consumer_groups": 6
+  },
+  "dev.marketing.events": {
+   "name": "dev.marketing.events",
+   "env": "dev",
+   "owner_team": "marketing",
+   "retention_hours": 336,
+   "consumer_groups": 4
+  },
+  "dev.marketing.clickstream": {
+   "name": "dev.marketing.clickstream",
+   "env": "dev",
+   "owner_team": "marketing",
+   "retention_hours": 720,
+   "consumer_groups": 4
+  },
+  "dev.supply-chain.cdc": {
+   "name": "dev.supply-chain.cdc",
+   "env": "dev",
+   "owner_team": "supply_chain",
+   "retention_hours": 336,
+   "consumer_groups": 2
+  },
+  "dev.supply-chain.alerts": {
+   "name": "dev.supply-chain.alerts",
+   "env": "dev",
+   "owner_team": "supply_chain",
+   "retention_hours": 336,
+   "consumer_groups": 2
+  },
+  "dev.customer-care.alerts": {
+   "name": "dev.customer-care.alerts",
+   "env": "dev",
+   "owner_team": "customer_care",
+   "retention_hours": 72,
+   "consumer_groups": 2
+  },
+  "dev.customer-care.events": {
+   "name": "dev.customer-care.events",
+   "env": "dev",
+   "owner_team": "customer_care",
+   "retention_hours": 72,
+   "consumer_groups": 4
+  },
+  "dev.risk.clickstream": {
+   "name": "dev.risk.clickstream",
+   "env": "dev",
+   "owner_team": "risk",
+   "retention_hours": 72,
+   "consumer_groups": 6
+  },
+  "dev.risk.cdc": {
+   "name": "dev.risk.cdc",
+   "env": "dev",
+   "owner_team": "risk",
+   "retention_hours": 168,
+   "consumer_groups": 5
+  }
+ },
+ "subjects": {
+  "prod.finance.events-value": {
+   "name": "prod.finance.events-value",
+   "env": "prod",
+   "owner_team": "finance"
+  },
+  "prod.finance.clickstream-value": {
+   "name": "prod.finance.clickstream-value",
+   "env": "prod",
+   "owner_team": "finance"
+  },
+  "prod.claims.transactions-value": {
+   "name": "prod.claims.transactions-value",
+   "env": "prod",
+   "owner_team": "claims"
+  },
+  "prod.claims.clickstream-value": {
+   "name": "prod.claims.clickstream-value",
+   "env": "prod",
+   "owner_team": "claims"
+  },
+  "prod.marketing.alerts-value": {
+   "name": "prod.marketing.alerts-value",
+   "env": "prod",
+   "owner_team": "marketing"
+  },
+  "prod.marketing.cdc-value": {
+   "name": "prod.marketing.cdc-value",
+   "env": "prod",
+   "owner_team": "marketing"
+  },
+  "prod.supply-chain.cdc-value": {
+   "name": "prod.supply-chain.cdc-value",
+   "env": "prod",
+   "owner_team": "supply_chain"
+  },
+  "prod.supply-chain.clickstream-value": {
+   "name": "prod.supply-chain.clickstream-value",
+   "env": "prod",
+   "owner_team": "supply_chain"
+  },
+  "prod.customer-care.transactions-value": {
+   "name": "prod.customer-care.transactions-value",
+   "env": "prod",
+   "owner_team": "customer_care"
+  },
+  "prod.customer-care.alerts-value": {
+   "name": "prod.customer-care.alerts-value",
+   "env": "prod",
+   "owner_team": "customer_care"
+  },
+  "prod.risk.transactions-value": {
+   "name": "prod.risk.transactions-value",
+   "env": "prod",
+   "owner_team": "risk"
+  },
+  "prod.risk.events-value": {
+   "name": "prod.risk.events-value",
+   "env": "prod",
+   "owner_team": "risk"
+  },
+  "dev.finance.alerts-value": {
+   "name": "dev.finance.alerts-value",
+   "env": "dev",
+   "owner_team": "finance"
+  },
+  "dev.finance.cdc-value": {
+   "name": "dev.finance.cdc-value",
+   "env": "dev",
+   "owner_team": "finance"
+  },
+  "dev.claims.transactions-value": {
+   "name": "dev.claims.transactions-value",
+   "env": "dev",
+   "owner_team": "claims"
+  },
+  "dev.claims.cdc-value": {
+   "name": "dev.claims.cdc-value",
+   "env": "dev",
+   "owner_team": "claims"
+  },
+  "dev.marketing.events-value": {
+   "name": "dev.marketing.events-value",
+   "env": "dev",
+   "owner_team": "marketing"
+  },
+  "dev.marketing.clickstream-value": {
+   "name": "dev.marketing.clickstream-value",
+   "env": "dev",
+   "owner_team": "marketing"
+  },
+  "dev.supply-chain.cdc-value": {
+   "name": "dev.supply-chain.cdc-value",
+   "env": "dev",
+   "owner_team": "supply_chain"
+  },
+  "dev.supply-chain.alerts-value": {
+   "name": "dev.supply-chain.alerts-value",
+   "env": "dev",
+   "owner_team": "supply_chain"
+  },
+  "dev.customer-care.alerts-value": {
+   "name": "dev.customer-care.alerts-value",
+   "env": "dev",
+   "owner_team": "customer_care"
+  },
+  "dev.customer-care.events-value": {
+   "name": "dev.customer-care.events-value",
+   "env": "dev",
+   "owner_team": "customer_care"
+  },
+  "dev.risk.clickstream-value": {
+   "name": "dev.risk.clickstream-value",
+   "env": "dev",
+   "owner_team": "risk"
+  },
+  "dev.risk.cdc-value": {
+   "name": "dev.risk.cdc-value",
+   "env": "dev",
+   "owner_team": "risk"
+  }
+ },
+ "groups": {
+  "finance-readers": {
+   "name": "finance-readers",
+   "privileged": false,
+   "admin": false
+  },
+  "finance-engineers": {
+   "name": "finance-engineers",
+   "privileged": true,
+   "admin": false
+  },
+  "claims-readers": {
+   "name": "claims-readers",
+   "privileged": false,
+   "admin": false
+  },
+  "claims-engineers": {
+   "name": "claims-engineers",
+   "privileged": true,
+   "admin": false
+  },
+  "marketing-readers": {
+   "name": "marketing-readers",
+   "privileged": false,
+   "admin": false
+  },
+  "marketing-engineers": {
+   "name": "marketing-engineers",
+   "privileged": true,
+   "admin": false
+  },
+  "supply_chain-readers": {
+   "name": "supply_chain-readers",
+   "privileged": false,
+   "admin": false
+  },
+  "supply_chain-engineers": {
+   "name": "supply_chain-engineers",
+   "privileged": true,
+   "admin": false
+  },
+  "customer_care-readers": {
+   "name": "customer_care-readers",
+   "privileged": false,
+   "admin": false
+  },
+  "customer_care-engineers": {
+   "name": "customer_care-engineers",
+   "privileged": true,
+   "admin": false
+  },
+  "platform-readers": {
+   "name": "platform-readers",
+   "privileged": false,
+   "admin": false
+  },
+  "platform-engineers": {
+   "name": "platform-engineers",
+   "privileged": true,
+   "admin": false
+  },
+  "risk-readers": {
+   "name": "risk-readers",
+   "privileged": false,
+   "admin": false
+  },
+  "risk-engineers": {
+   "name": "risk-engineers",
+   "privileged": true,
+   "admin": false
+  },
+  "workspace-admins": {
+   "name": "workspace-admins",
+   "privileged": true,
+   "admin": true
+  },
+  "metastore-admins": {
+   "name": "metastore-admins",
+   "privileged": true,
+   "admin": true
+  }
+ }
+}
