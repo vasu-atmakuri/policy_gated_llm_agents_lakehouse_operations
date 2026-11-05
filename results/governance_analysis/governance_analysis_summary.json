@@ -1,0 +1,204 @@
+{
+  "systems": [
+    "finetuned_encoder",
+    "gemma3:12b",
+    "keyword_router",
+    "llama3.1:8b",
+    "qwen3:14b",
+    "qwen3:32b",
+    "qwen3:8b"
+  ],
+  "evaluation_instances": 3040,
+  "validator_soundness_violations": 0,
+  "overall": [
+    {
+      "system": "finetuned_encoder",
+      "pipeline": "validator_gate",
+      "unsafe_execution_rate": 0.0516,
+      "decision_accuracy": 0.923,
+      "automation_rate": 0.2345
+    },
+    {
+      "system": "gemma3:12b",
+      "pipeline": "confidence_escalation",
+      "unsafe_execution_rate": 0.0,
+      "decision_accuracy": 0.6574,
+      "automation_rate": 0.0
+    },
+    {
+      "system": "gemma3:12b",
+      "pipeline": "llm_only",
+      "unsafe_execution_rate": 0.1019,
+      "decision_accuracy": 0.5463,
+      "automation_rate": 0.3117
+    },
+    {
+      "system": "gemma3:12b",
+      "pipeline": "risk_crosscheck",
+      "unsafe_execution_rate": 0.0186,
+      "decision_accuracy": 0.8359,
+      "automation_rate": 0.1796
+    },
+    {
+      "system": "gemma3:12b",
+      "pipeline": "validator_gate",
+      "unsafe_execution_rate": 0.0216,
+      "decision_accuracy": 0.9846,
+      "automation_rate": 0.3272
+    },
+    {
+      "system": "gemma3:12b",
+      "pipeline": "validator_or_llm",
+      "unsafe_execution_rate": 0.0062,
+      "decision_accuracy": 0.8457,
+      "automation_rate": 0.216
+    },
+    {
+      "system": "keyword_router",
+      "pipeline": "validator_gate",
+      "unsafe_execution_rate": 0.0115,
+      "decision_accuracy": 0.8717,
+      "automation_rate": 0.1908
+    },
+    {
+      "system": "llama3.1:8b",
+      "pipeline": "confidence_escalation",
+      "unsafe_execution_rate": 0.0191,
+      "decision_accuracy": 0.923,
+      "automation_rate": 0.2036
+    },
+    {
+      "system": "llama3.1:8b",
+      "pipeline": "llm_only",
+      "unsafe_execution_rate": 0.5888,
+      "decision_accuracy": 0.2878,
+      "automation_rate": 0.7691
+    },
+    {
+      "system": "llama3.1:8b",
+      "pipeline": "risk_crosscheck",
+      "unsafe_execution_rate": 0.0043,
+      "decision_accuracy": 0.8388,
+      "automation_rate": 0.1086
+    },
+    {
+      "system": "llama3.1:8b",
+      "pipeline": "validator_gate",
+      "unsafe_execution_rate": 0.0207,
+      "decision_accuracy": 0.9362,
+      "automation_rate": 0.2184
+    },
+    {
+      "system": "llama3.1:8b",
+      "pipeline": "validator_or_llm",
+      "unsafe_execution_rate": 0.0191,
+      "decision_accuracy": 0.9118,
+      "automation_rate": 0.199
+    },
+    {
+      "system": "qwen3:14b",
+      "pipeline": "confidence_escalation",
+      "unsafe_execution_rate": 0.0132,
+      "decision_accuracy": 0.9641,
+      "automation_rate": 0.2188
+    },
+    {
+      "system": "qwen3:14b",
+      "pipeline": "llm_only",
+      "unsafe_execution_rate": 0.4678,
+      "decision_accuracy": 0.3674,
+      "automation_rate": 0.6549
+    },
+    {
+      "system": "qwen3:14b",
+      "pipeline": "risk_crosscheck",
+      "unsafe_execution_rate": 0.0059,
+      "decision_accuracy": 0.9039,
+      "automation_rate": 0.153
+    },
+    {
+      "system": "qwen3:14b",
+      "pipeline": "validator_gate",
+      "unsafe_execution_rate": 0.0132,
+      "decision_accuracy": 0.9641,
+      "automation_rate": 0.2188
+    },
+    {
+      "system": "qwen3:14b",
+      "pipeline": "validator_or_llm",
+      "unsafe_execution_rate": 0.0128,
+      "decision_accuracy": 0.8836,
+      "automation_rate": 0.2
+    },
+    {
+      "system": "qwen3:32b",
+      "pipeline": "confidence_escalation",
+      "unsafe_execution_rate": 0.0102,
+      "decision_accuracy": 0.9681,
+      "automation_rate": 0.2171
+    },
+    {
+      "system": "qwen3:32b",
+      "pipeline": "llm_only",
+      "unsafe_execution_rate": 0.3391,
+      "decision_accuracy": 0.4263,
+      "automation_rate": 0.5214
+    },
+    {
+      "system": "qwen3:32b",
+      "pipeline": "risk_crosscheck",
+      "unsafe_execution_rate": 0.0069,
+      "decision_accuracy": 0.9115,
+      "automation_rate": 0.1556
+    },
+    {
+      "system": "qwen3:32b",
+      "pipeline": "validator_gate",
+      "unsafe_execution_rate": 0.0102,
+      "decision_accuracy": 0.9681,
+      "automation_rate": 0.2171
+    },
+    {
+      "system": "qwen3:32b",
+      "pipeline": "validator_or_llm",
+      "unsafe_execution_rate": 0.0099,
+      "decision_accuracy": 0.8888,
+      "automation_rate": 0.1921
+    },
+    {
+      "system": "qwen3:8b",
+      "pipeline": "confidence_escalation",
+      "unsafe_execution_rate": 0.0168,
+      "decision_accuracy": 0.9546,
+      "automation_rate": 0.2217
+    },
+    {
+      "system": "qwen3:8b",
+      "pipeline": "llm_only",
+      "unsafe_execution_rate": 0.3615,
+      "decision_accuracy": 0.4023,
+      "automation_rate": 0.5372
+    },
+    {
+      "system": "qwen3:8b",
+      "pipeline": "risk_crosscheck",
+      "unsafe_execution_rate": 0.0099,
+      "decision_accuracy": 0.8599,
+      "automation_rate": 0.1174
+    },
+    {
+      "system": "qwen3:8b",
+      "pipeline": "validator_gate",
+      "unsafe_execution_rate": 0.0168,
+      "decision_accuracy": 0.9546,
+      "automation_rate": 0.2217
+    },
+    {
+      "system": "qwen3:8b",
+      "pipeline": "validator_or_llm",
+      "unsafe_execution_rate": 0.0118,
+      "decision_accuracy": 0.8757,
+      "automation_rate": 0.1875
+    }
+  ]
+}
