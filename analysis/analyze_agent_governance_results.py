@@ -33,7 +33,7 @@ sys.path.insert(0, str(ROOT / "agent_evaluation"))
 from lakehouse_governance_benchmark.environment import build_environment  # noqa: E402
 from lakehouse_governance_benchmark.operations import DECISIONS, OPERATIONS  # noqa: E402
 from lakehouse_governance_benchmark.pipelines import (  # noqa: E402
-    escalate, llm_decision, normalize_operation, outcome, risk_escalates, same_operation, validator_decision,
+    _norm_value, escalate, llm_decision, normalize_operation, outcome, risk_escalates, same_operation, validator_decision,
 )
 from lakehouse_governance_benchmark.policy import SEVERITY  # noqa: E402
 from run_local_model_agent_evaluation import load_instances  # noqa: E402
@@ -131,8 +131,8 @@ def error_source(inst, op):
         return "unparseable"
     if op["intent"] != inst["operation"]["intent"]:
         return "wrong_operation_type"
-    bad = [k for k in inst["operation"]["params"]
-           if str(op["params"].get(k)).lower() != str(inst["operation"]["params"].get(k)).lower()]
+    ref = normalize_operation(inst["operation"], inst["context"]["requester"])
+    bad = [k for k in ref["params"] if _norm_value(op["params"].get(k)) != _norm_value(ref["params"].get(k))]
     kinds = {OPERATIONS[op["intent"]].params.get(k) for k in bad}
     if kinds & {"principal"}:
         return "wrong_principal"
@@ -140,7 +140,11 @@ def error_source(inst, op):
         return "wrong_resource"
     if kinds & {"int"}:
         return "wrong_numeric_value"
-    return "wrong_other_parameter"
+    if kinds & {"predicate"}:
+        return "wrong_row_predicate"
+    if kinds & {"destination", "schema_change"}:
+        return "wrong_option_value"
+    return "unclassified"
 
 
 def macro_f1(y, p):
@@ -172,6 +176,8 @@ def summarize(df):
                      "macro_f1": macro_f1(g.gold_decision.values, g.decision.values),
                      "over_escalation_rate": auto_gold.over_escalation.mean() if len(auto_gold) else np.nan,
                      "automation_rate": (g.decision == "auto_execute").mean(),
+                     "correct_automation_recall": ((auto_gold.decision == "auto_execute") & auto_gold.operation_correct).mean()
+                     if len(auto_gold) else np.nan,
                      "operation_accuracy": g.operation_correct.mean(), "intent_accuracy": g.intent_correct.mean(),
                      "parse_failure_rate": g.parse_failure.mean()})
     return pd.DataFrame(rows)

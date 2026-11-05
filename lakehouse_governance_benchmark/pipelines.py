@@ -42,7 +42,9 @@ def normalize_operation(parsed, requester):
             except (TypeError, ValueError):
                 v = None
         elif isinstance(v, str):
-            v = v.strip().strip("`'\"")
+            v = v.strip()
+            if kind != "predicate":  # predicates keep their SQL quoting
+                v = v.strip("`'\"")
             if kind == "principal" and v.lower() in ("me", "myself", "requester"):
                 v = requester
         clean[k] = v
@@ -88,7 +90,10 @@ def escalate(decision):
 def outcome(instance, decision, proposed_op):
     gold = instance["gold_decision"]
     executed = decision == "auto_execute"
-    correct_op = same_operation(proposed_op, instance["operation"])
+    # the reference operation goes through the same normalization as the proposed one
+    reference = normalize_operation(instance["operation"], instance["context"]["requester"]) \
+        if instance["operation"]["intent"] != "out_of_scope" else instance["operation"]
+    correct_op = same_operation(proposed_op, reference)
     return {
         "decision": decision,
         "decision_correct": decision == gold,
