@@ -8,9 +8,14 @@ import urllib.request
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 
 
-def chat_json(model, system, user, schema, temperature=0.0, seed=0, num_ctx=8192, timeout=600, retries=2):
+def chat_json(model, system, user, schema, temperature=0.0, seed=0, num_ctx=8192, timeout=240, retries=2,
+              max_output_tokens=None):
+    # cap generation so a model that loops inside the JSON cannot stall the run; reasoning models need more room
+    if max_output_tokens is None:
+        max_output_tokens = 4096 if "gpt-oss" in model else 768
     body = {"model": model, "stream": False, "format": schema, "think": False,
-            "options": {"temperature": temperature, "seed": seed, "num_ctx": num_ctx},
+            "options": {"temperature": temperature, "seed": seed, "num_ctx": num_ctx,
+                        "num_predict": max_output_tokens},
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
     last = None
     for attempt in range(retries + 1):
