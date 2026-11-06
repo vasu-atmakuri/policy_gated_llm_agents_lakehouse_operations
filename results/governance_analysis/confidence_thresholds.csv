@@ -2,7 +2,7 @@ system,confidence_threshold
 finetuned_encoder,0.0
 gemma3:12b,1.01
 keyword_router,0.0
-llama3.1:8b,1.0
+llama3.1:8b,0.0
 qwen3:14b,0.0
 qwen3:32b,0.0
 qwen3:8b,0.0
