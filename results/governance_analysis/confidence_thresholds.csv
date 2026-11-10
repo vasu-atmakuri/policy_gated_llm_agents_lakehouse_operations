@@ -1,8 +1,13 @@
 system,confidence_threshold
 finetuned_encoder,0.0
-gemma3:12b,1.01
+gemma3:12b,0.0
+gpt-oss:20b,0.0
 keyword_router,0.0
 llama3.1:8b,0.0
+llama3.2:3b,1.01
+mistral-small3.2:24b,0.0
+phi4:14b,0.0
 qwen3:14b,0.0
 qwen3:32b,0.0
+qwen3:4b,0.0
 qwen3:8b,0.0

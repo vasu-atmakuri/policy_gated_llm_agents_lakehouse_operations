@@ -2,6 +2,15 @@ system,pipeline,source,count
 finetuned_encoder,validator_gate,wrong_operation_type,134
 finetuned_encoder,validator_gate,wrong_option_value,3
 finetuned_encoder,validator_gate,wrong_row_predicate,1
+gemma3:12b,confidence_escalation,wrong_operation_type,12
+gemma3:12b,risk_crosscheck,wrong_operation_type,3
+gemma3:12b,validator_gate,wrong_operation_type,12
+gpt-oss:20b,confidence_escalation,wrong_operation_type,15
+gpt-oss:20b,confidence_escalation,wrong_row_predicate,1
+gpt-oss:20b,risk_crosscheck,wrong_operation_type,6
+gpt-oss:20b,risk_crosscheck,wrong_row_predicate,1
+gpt-oss:20b,validator_gate,wrong_operation_type,15
+gpt-oss:20b,validator_gate,wrong_row_predicate,1
 keyword_router,validator_gate,wrong_operation_type,11
 keyword_router,validator_gate,wrong_option_value,4
 keyword_router,validator_gate,wrong_row_predicate,1
@@ -11,6 +20,10 @@ llama3.1:8b,risk_crosscheck,wrong_operation_type,7
 llama3.1:8b,risk_crosscheck,wrong_row_predicate,1
 llama3.1:8b,validator_gate,wrong_operation_type,38
 llama3.1:8b,validator_gate,wrong_row_predicate,5
+llama3.2:3b,risk_crosscheck,wrong_operation_type,9
+llama3.2:3b,validator_gate,wrong_operation_type,131
+mistral-small3.2:24b,confidence_escalation,wrong_operation_type,4
+mistral-small3.2:24b,validator_gate,wrong_operation_type,4
 qwen3:14b,confidence_escalation,wrong_operation_type,20
 qwen3:14b,risk_crosscheck,wrong_operation_type,6
 qwen3:14b,validator_gate,wrong_operation_type,20
@@ -19,6 +32,9 @@ qwen3:32b,confidence_escalation,wrong_principal,1
 qwen3:32b,risk_crosscheck,wrong_principal,1
 qwen3:32b,validator_gate,wrong_operation_type,10
 qwen3:32b,validator_gate,wrong_principal,1
+qwen3:4b,confidence_escalation,wrong_operation_type,35
+qwen3:4b,risk_crosscheck,wrong_operation_type,18
+qwen3:4b,validator_gate,wrong_operation_type,35
 qwen3:8b,confidence_escalation,wrong_operation_type,25
 qwen3:8b,confidence_escalation,wrong_row_predicate,6
 qwen3:8b,risk_crosscheck,wrong_operation_type,7
