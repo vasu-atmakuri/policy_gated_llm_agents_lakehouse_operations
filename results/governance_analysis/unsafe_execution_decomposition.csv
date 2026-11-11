@@ -24,6 +24,9 @@ llama3.2:3b,risk_crosscheck,wrong_operation_type,9
 llama3.2:3b,validator_gate,wrong_operation_type,131
 mistral-small3.2:24b,confidence_escalation,wrong_operation_type,4
 mistral-small3.2:24b,validator_gate,wrong_operation_type,4
+phi4:14b,confidence_escalation,wrong_operation_type,28
+phi4:14b,risk_crosscheck,wrong_operation_type,5
+phi4:14b,validator_gate,wrong_operation_type,28
 qwen3:14b,confidence_escalation,wrong_operation_type,20
 qwen3:14b,risk_crosscheck,wrong_operation_type,6
 qwen3:14b,validator_gate,wrong_operation_type,20

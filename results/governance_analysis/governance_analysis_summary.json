@@ -208,37 +208,37 @@
     {
       "system": "phi4:14b",
       "pipeline": "confidence_escalation",
-      "unsafe_execution_rate": 0.0,
-      "decision_accuracy": 0.4105,
-      "automation_rate": 0.0
+      "unsafe_execution_rate": 0.0092,
+      "decision_accuracy": 0.9618,
+      "automation_rate": 0.2207
     },
     {
       "system": "phi4:14b",
       "pipeline": "llm_only",
-      "unsafe_execution_rate": 0.0,
-      "decision_accuracy": 0.4105,
-      "automation_rate": 0.0
+      "unsafe_execution_rate": 0.5365,
+      "decision_accuracy": 0.3438,
+      "automation_rate": 0.7428
     },
     {
       "system": "phi4:14b",
       "pipeline": "risk_crosscheck",
-      "unsafe_execution_rate": 0.0,
-      "decision_accuracy": 0.4105,
-      "automation_rate": 0.0
+      "unsafe_execution_rate": 0.0016,
+      "decision_accuracy": 0.8776,
+      "automation_rate": 0.128
     },
     {
       "system": "phi4:14b",
       "pipeline": "validator_gate",
-      "unsafe_execution_rate": 0.0,
-      "decision_accuracy": 0.4105,
-      "automation_rate": 0.0
+      "unsafe_execution_rate": 0.0092,
+      "decision_accuracy": 0.9618,
+      "automation_rate": 0.2207
     },
     {
       "system": "phi4:14b",
       "pipeline": "validator_or_llm",
-      "unsafe_execution_rate": 0.0,
-      "decision_accuracy": 0.4105,
-      "automation_rate": 0.0
+      "unsafe_execution_rate": 0.0089,
+      "decision_accuracy": 0.9112,
+      "automation_rate": 0.2151
     },
     {
       "system": "qwen3:14b",
