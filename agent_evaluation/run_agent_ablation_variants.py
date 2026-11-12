@@ -16,6 +16,7 @@ Variant sets
         self_check: qwen3:8b, qwen3:32b, mistral-small3.2:24b, gpt-oss:20b
   air   sampling: llama3.2:3b, qwen3:4b; self_check: llama3.2:3b, qwen3:4b
   air_next  sampling: llama3.1:8b
+  pro_more  reasoning: qwen3:8b
   pro_extra sampling: llama3.1:8b; self_check: llama3.1:8b, gemma3:12b, phi4:14b, qwen3:14b
 
 Outputs go to results/agent_ablation_outputs/<label>.jsonl (kept apart from the main outputs so the main analysis is
@@ -62,6 +63,7 @@ VARIANT_SETS = {
     "pro_extra": [("sampling", "llama3.1:8b", 1), ("sampling", "llama3.1:8b", 2),
                   ("self_check", "llama3.1:8b", None), ("self_check", "gemma3:12b", None),
                   ("self_check", "phi4:14b", None), ("self_check", "qwen3:14b", None)],
+    "pro_more": [("reasoning", "qwen3:8b", None)],
 }
 
 SELF_CHECK_SYSTEM = """You are the governance reviewer of a company's data lakehouse platform. An operations agent has
