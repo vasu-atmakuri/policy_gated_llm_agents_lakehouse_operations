@@ -1,0 +1,14 @@
+system,pipeline,compared_with,n,unsafe_variant,unsafe_reference,mcnemar_p,variant_only_unsafe,reference_only_unsafe,p_holm
+"gemma3:12b (sampling, seed1)",llm_only,main run llm_only,800,0.28125,0.285,0.7011080384254456,12,15,1.0
+"gemma3:12b (sampling, seed2)",llm_only,main run llm_only,800,0.28375,0.285,1.0,15,16,1.0
+gpt-oss:20b (self_check),llm_self_check,main run validator_gate,800,0.13125,0.00625,4.062633661888211e-29,101,1,3.6563702956993897e-28
+"mistral-small3.2:24b (sampling, seed1)",llm_only,main run llm_only,800,0.40125,0.3975,0.7607916425613439,23,20,1.0
+"mistral-small3.2:24b (sampling, seed2)",llm_only,main run llm_only,800,0.39375,0.3975,0.7981526273057179,29,32,1.0
+mistral-small3.2:24b (self_check),llm_self_check,main run validator_gate,800,0.175,0.0,1.4349296274686127e-42,140,0,1.4349296274686127e-41
+qwen3:14b (reasoning),llm_only,main run llm_only,800,0.285,0.5325,3.062520861317978e-43,20,218,3.368772947449776e-42
+qwen3:32b (reasoning),llm_only,main run llm_only,800,0.2675,0.3875,8.277090033172631e-17,23,119,6.621672026538105e-16
+qwen3:32b (self_check),llm_self_check,main run validator_gate,800,0.2925,0.00125,1.448908652612274e-70,233,0,1.7386903831347288e-69
+qwen3:4b (reasoning),llm_only,main run llm_only,800,0.21125,0.20875,0.937020169213198,81,79,1.0
+"qwen3:8b (sampling, seed1)",llm_only,main run llm_only,800,0.48,0.42875,8.225455871979648e-10,45,4,5.7578191103857534e-09
+"qwen3:8b (sampling, seed2)",llm_only,main run llm_only,800,0.4325,0.42875,0.629058837890625,10,7,1.0
+qwen3:8b (self_check),llm_self_check,main run validator_gate,800,0.3725,0.0075,1.8536736924964215e-86,293,1,2.409775800245348e-85
