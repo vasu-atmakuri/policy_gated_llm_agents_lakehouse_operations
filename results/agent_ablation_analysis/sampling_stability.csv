@@ -1,7 +1,13 @@
 model,label,instances,llm_decision_changed_vs_temperature0
 gemma3:12b,gemma3_12b__sampling_seed1,800,0.06375
 gemma3:12b,gemma3_12b__sampling_seed2,800,0.06
+llama3.1:8b,llama3.1_8b__sampling_seed1,800,0.0875
+llama3.1:8b,llama3.1_8b__sampling_seed2,800,0.12125
+llama3.2:3b,llama3.2_3b__sampling_seed1,800,0.195
+llama3.2:3b,llama3.2_3b__sampling_seed2,800,0.175
 mistral-small3.2:24b,mistral-small3.2_24b__sampling_seed1,800,0.09625
 mistral-small3.2:24b,mistral-small3.2_24b__sampling_seed2,800,0.145
+qwen3:4b,qwen3_4b__sampling_seed1,800,0.10625
+qwen3:4b,qwen3_4b__sampling_seed2,800,0.15
 qwen3:8b,qwen3_8b__sampling_seed1,800,0.08625
 qwen3:8b,qwen3_8b__sampling_seed2,800,0.0375
