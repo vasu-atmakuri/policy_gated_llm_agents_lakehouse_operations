@@ -662,13 +662,37 @@
       "correct_automation_recall": 0.9795
     },
     {
+      "system": "qwen3:8b (reasoning)",
+      "pipeline": "llm_only",
+      "n": 800,
+      "unsafe_execution_rate": 0.3225,
+      "unsafe_ci95": [
+        0.29,
+        0.35625
+      ],
+      "decision_accuracy": 0.5387,
+      "correct_automation_recall": 0.8836
+    },
+    {
+      "system": "qwen3:8b (reasoning)",
+      "pipeline": "validator_gate",
+      "n": 800,
+      "unsafe_execution_rate": 0.0062,
+      "unsafe_ci95": [
+        0.00125,
+        0.0125
+      ],
+      "decision_accuracy": 0.9675,
+      "correct_automation_recall": 0.9795
+    },
+    {
       "system": "qwen3:8b (sampling, seed1)",
       "pipeline": "llm_only",
       "n": 800,
       "unsafe_execution_rate": 0.48,
       "unsafe_ci95": [
-        0.445,
-        0.515
+        0.44625,
+        0.5125
       ],
       "decision_accuracy": 0.34,
       "correct_automation_recall": 0.8767
@@ -679,7 +703,7 @@
       "n": 800,
       "unsafe_execution_rate": 0.0088,
       "unsafe_ci95": [
-        0.0025,
+        0.00375,
         0.01625
       ],
       "decision_accuracy": 0.9475,
@@ -692,7 +716,7 @@
       "unsafe_execution_rate": 0.4325,
       "unsafe_ci95": [
         0.39875,
-        0.465
+        0.46753124999999984
       ],
       "decision_accuracy": 0.3638,
       "correct_automation_recall": 0.8699
@@ -715,8 +739,8 @@
       "n": 800,
       "unsafe_execution_rate": 0.3725,
       "unsafe_ci95": [
-        0.34121875,
-        0.4062812499999998
+        0.33996875000000004,
+        0.40625
       ],
       "decision_accuracy": 0.3838,
       "correct_automation_recall": 0.8151
@@ -985,6 +1009,18 @@
       "mcnemar_p": 0.0,
       "variant_only_unsafe": 158,
       "reference_only_unsafe": 1,
+      "p_holm": 0.0
+    },
+    {
+      "system": "qwen3:8b (reasoning)",
+      "pipeline": "llm_only",
+      "compared_with": "main run llm_only",
+      "n": 800,
+      "unsafe_variant": 0.3225,
+      "unsafe_reference": 0.4288,
+      "mcnemar_p": 0.0,
+      "variant_only_unsafe": 42,
+      "reference_only_unsafe": 127,
       "p_holm": 0.0
     },
     {

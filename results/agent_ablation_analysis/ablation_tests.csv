@@ -1,26 +1,27 @@
 system,pipeline,compared_with,n,unsafe_variant,unsafe_reference,mcnemar_p,variant_only_unsafe,reference_only_unsafe,p_holm
 "gemma3:12b (sampling, seed1)",llm_only,main run llm_only,800,0.28125,0.285,0.7011080384254456,12,15,1.0
 "gemma3:12b (sampling, seed2)",llm_only,main run llm_only,800,0.28375,0.285,1.0,15,16,1.0
-gemma3:12b (self_check),llm_self_check,main run validator_gate,800,0.12625,0.0025,3.1554436208840472e-30,99,0,5.048709793414476e-29
-gpt-oss:20b (self_check),llm_self_check,main run validator_gate,800,0.13125,0.00625,4.062633661888211e-29,101,1,6.093950492832316e-28
+gemma3:12b (self_check),llm_self_check,main run validator_gate,800,0.12625,0.0025,3.1554436208840472e-30,99,0,5.36425415550288e-29
+gpt-oss:20b (self_check),llm_self_check,main run validator_gate,800,0.13125,0.00625,4.062633661888211e-29,101,1,6.500213859021137e-28
 "llama3.1:8b (sampling, seed1)",llm_only,main run llm_only,800,0.63125,0.63,1.0,24,23,1.0
 "llama3.1:8b (sampling, seed2)",llm_only,main run llm_only,800,0.59875,0.63,0.005228243004014281,25,50,0.04705418703612853
-llama3.1:8b (self_check),llm_self_check,main run validator_gate,800,0.31,0.01,8.819690233198441e-66,245,5,1.8521349489716727e-64
+llama3.1:8b (self_check),llm_self_check,main run validator_gate,800,0.31,0.01,8.819690233198441e-66,245,5,1.940331851303657e-64
 "llama3.2:3b (sampling, seed1)",llm_only,main run llm_only,800,0.64375,0.68125,0.012604512869782342,53,83,0.10083610295825873
 "llama3.2:3b (sampling, seed2)",llm_only,main run llm_only,800,0.63125,0.68125,7.85013964559367e-05,30,70,0.0008635153610153036
-llama3.2:3b (self_check),llm_self_check,main run validator_gate,800,0.575,0.035,1.9611062982113257e-128,433,1,4.902765745528314e-127
+llama3.2:3b (self_check),llm_self_check,main run validator_gate,800,0.575,0.035,1.9611062982113257e-128,433,1,5.098876375349447e-127
 "mistral-small3.2:24b (sampling, seed1)",llm_only,main run llm_only,800,0.40125,0.3975,0.7607916425613439,23,20,1.0
 "mistral-small3.2:24b (sampling, seed2)",llm_only,main run llm_only,800,0.39375,0.3975,0.7981526273057179,29,32,1.0
-mistral-small3.2:24b (self_check),llm_self_check,main run validator_gate,800,0.175,0.0,1.4349296274686127e-42,140,0,2.582873329443503e-41
-phi4:14b (self_check),llm_self_check,main run validator_gate,800,0.36625,0.005,2.010764683385949e-87,289,0,4.825835240126277e-86
-qwen3:14b (reasoning),llm_only,main run llm_only,800,0.285,0.5325,3.062520861317978e-43,20,218,5.818789636504159e-42
-qwen3:14b (self_check),llm_self_check,main run validator_gate,800,0.16625,0.00375,1.4693679385278594e-39,130,0,2.497925495497361e-38
-qwen3:32b (reasoning),llm_only,main run llm_only,800,0.2675,0.3875,8.277090033172631e-17,23,119,1.1587926046441685e-15
-qwen3:32b (self_check),llm_self_check,main run validator_gate,800,0.2925,0.00125,1.448908652612274e-70,233,0,3.187599035747003e-69
+mistral-small3.2:24b (self_check),llm_self_check,main run validator_gate,800,0.175,0.0,1.4349296274686127e-42,140,0,2.726366292190364e-41
+phi4:14b (self_check),llm_self_check,main run validator_gate,800,0.36625,0.005,2.010764683385949e-87,289,0,5.026911708464872e-86
+qwen3:14b (reasoning),llm_only,main run llm_only,800,0.285,0.5325,3.062520861317978e-43,20,218,6.125041722635956e-42
+qwen3:14b (self_check),llm_self_check,main run validator_gate,800,0.16625,0.00375,1.4693679385278594e-39,130,0,2.644862289350147e-38
+qwen3:32b (reasoning),llm_only,main run llm_only,800,0.2675,0.3875,8.277090033172631e-17,23,119,1.2415635049758947e-15
+qwen3:32b (self_check),llm_self_check,main run validator_gate,800,0.2925,0.00125,1.448908652612274e-70,233,0,3.33248990100823e-69
 qwen3:4b (reasoning),llm_only,main run llm_only,800,0.21125,0.20875,0.937020169213198,81,79,1.0
 "qwen3:4b (sampling, seed1)",llm_only,main run llm_only,800,0.24625,0.20875,0.00044028500651396835,50,20,0.004402850065139683
 "qwen3:4b (sampling, seed2)",llm_only,main run llm_only,800,0.26125,0.20875,2.7318699228822653e-06,61,19,3.278243907458718e-05
-qwen3:4b (self_check),llm_self_check,main run validator_gate,800,0.2075,0.01125,4.379057701015053e-46,158,1,8.758115402030107e-45
+qwen3:4b (self_check),llm_self_check,main run validator_gate,800,0.2075,0.01125,4.379057701015053e-46,158,1,9.196021172131612e-45
+qwen3:8b (reasoning),llm_only,main run llm_only,800,0.3225,0.42875,3.983773385419666e-11,42,127,5.577282739587533e-10
 "qwen3:8b (sampling, seed1)",llm_only,main run llm_only,800,0.48,0.42875,8.225455871979648e-10,45,4,1.0693092633573542e-08
 "qwen3:8b (sampling, seed2)",llm_only,main run llm_only,800,0.4325,0.42875,0.629058837890625,10,7,1.0
-qwen3:8b (self_check),llm_self_check,main run validator_gate,800,0.3725,0.0075,1.8536736924964215e-86,293,1,4.2634494927417696e-85
+qwen3:8b (self_check),llm_self_check,main run validator_gate,800,0.3725,0.0075,1.8536736924964215e-86,293,1,4.4488168619914117e-85
