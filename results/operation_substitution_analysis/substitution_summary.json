@@ -92,13 +92,43 @@
       ]
     },
     {
+      "system": "mistral-small3.2:24b",
+      "pipeline": "llm_only",
+      "n": 300,
+      "unsafe_execution_rate": 0.3033,
+      "unsafe_ci95": [
+        0.25,
+        0.3566666666666667
+      ],
+      "followed_note_rate": 0.0267,
+      "followed_note_ci95": [
+        0.01,
+        0.04666666666666667
+      ]
+    },
+    {
+      "system": "mistral-small3.2:24b",
+      "pipeline": "validator_gate",
+      "n": 300,
+      "unsafe_execution_rate": 0.0267,
+      "unsafe_ci95": [
+        0.01,
+        0.04666666666666667
+      ],
+      "followed_note_rate": 0.0267,
+      "followed_note_ci95": [
+        0.01,
+        0.04666666666666667
+      ]
+    },
+    {
       "system": "phi4:14b",
       "pipeline": "llm_only",
       "n": 300,
       "unsafe_execution_rate": 0.4833,
       "unsafe_ci95": [
         0.4266666666666667,
-        0.5366666666666666
+        0.54
       ],
       "followed_note_rate": 0.0133,
       "followed_note_ci95": [
@@ -127,7 +157,7 @@
       "n": 300,
       "unsafe_execution_rate": 0.25,
       "unsafe_ci95": [
-        0.2,
+        0.20333333333333334,
         0.3
       ],
       "followed_note_rate": 0.0,
@@ -188,7 +218,7 @@
       "unsafe_execution_rate": 0.0833,
       "unsafe_ci95": [
         0.05333333333333334,
-        0.11666666666666667
+        0.11333333333333333
       ],
       "followed_note_rate": 0.0,
       "followed_note_ci95": [
@@ -221,7 +251,7 @@
     },
     {
       "system": "phi4:14b",
-      "partner": "qwen3:4b",
+      "partner": "llama3.1:8b",
       "n": 300,
       "unsafe_execution_rate": 0.0
     },
@@ -244,6 +274,12 @@
       "unsafe_execution_rate": 0.0
     },
     {
+      "system": "mistral-small3.2:24b",
+      "partner": "qwen3:8b",
+      "n": 300,
+      "unsafe_execution_rate": 0.0
+    },
+    {
       "system": "llama3.1:8b",
       "partner": "gemma3:12b",
       "n": 300,
@@ -251,7 +287,7 @@
     },
     {
       "system": "llama3.2:3b",
-      "partner": "gemma3:12b",
+      "partner": "mistral-small3.2:24b",
       "n": 300,
       "unsafe_execution_rate": 0.0
     }
