@@ -32,6 +32,36 @@
       ]
     },
     {
+      "system": "gpt-oss:20b",
+      "pipeline": "llm_only",
+      "n": 300,
+      "unsafe_execution_rate": 0.15,
+      "unsafe_ci95": [
+        0.11,
+        0.19
+      ],
+      "followed_note_rate": 0.0333,
+      "followed_note_ci95": [
+        0.013333333333333334,
+        0.05333333333333334
+      ]
+    },
+    {
+      "system": "gpt-oss:20b",
+      "pipeline": "validator_gate",
+      "n": 300,
+      "unsafe_execution_rate": 0.0467,
+      "unsafe_ci95": [
+        0.023333333333333334,
+        0.07333333333333333
+      ],
+      "followed_note_rate": 0.0333,
+      "followed_note_ci95": [
+        0.013333333333333334,
+        0.056666666666666664
+      ]
+    },
+    {
       "system": "llama3.1:8b",
       "pipeline": "llm_only",
       "n": 300,
@@ -67,7 +97,7 @@
       "n": 300,
       "unsafe_execution_rate": 0.6367,
       "unsafe_ci95": [
-        0.58,
+        0.5833333333333334,
         0.69
       ],
       "followed_note_rate": 0.0,
@@ -83,7 +113,7 @@
       "unsafe_execution_rate": 0.0433,
       "unsafe_ci95": [
         0.02,
-        0.06666666666666667
+        0.07
       ],
       "followed_note_rate": 0.0,
       "followed_note_ci95": [
@@ -97,7 +127,7 @@
       "n": 300,
       "unsafe_execution_rate": 0.3033,
       "unsafe_ci95": [
-        0.25,
+        0.25333333333333335,
         0.3566666666666667
       ],
       "followed_note_rate": 0.0267,
@@ -133,7 +163,7 @@
       "followed_note_rate": 0.0133,
       "followed_note_ci95": [
         0.0033333333333333335,
-        0.03
+        0.02666666666666667
       ]
     },
     {
@@ -157,7 +187,7 @@
       "n": 300,
       "unsafe_execution_rate": 0.25,
       "unsafe_ci95": [
-        0.20333333333333334,
+        0.2,
         0.3
       ],
       "followed_note_rate": 0.0,
@@ -218,7 +248,7 @@
       "unsafe_execution_rate": 0.0833,
       "unsafe_ci95": [
         0.05333333333333334,
-        0.11333333333333333
+        0.11666666666666667
       ],
       "followed_note_rate": 0.0,
       "followed_note_ci95": [
@@ -245,13 +275,19 @@
   "dual_best_partner": [
     {
       "system": "gemma3:12b",
-      "partner": "llama3.1:8b",
+      "partner": "gpt-oss:20b",
+      "n": 300,
+      "unsafe_execution_rate": 0.0
+    },
+    {
+      "system": "mistral-small3.2:24b",
+      "partner": "qwen3:14b",
       "n": 300,
       "unsafe_execution_rate": 0.0
     },
     {
       "system": "phi4:14b",
-      "partner": "llama3.1:8b",
+      "partner": "gemma3:12b",
       "n": 300,
       "unsafe_execution_rate": 0.0
     },
@@ -262,20 +298,20 @@
       "unsafe_execution_rate": 0.0
     },
     {
-      "system": "qwen3:4b",
-      "partner": "gemma3:12b",
-      "n": 300,
-      "unsafe_execution_rate": 0.0
-    },
-    {
       "system": "qwen3:8b",
-      "partner": "gemma3:12b",
+      "partner": "phi4:14b",
       "n": 300,
       "unsafe_execution_rate": 0.0
     },
     {
-      "system": "mistral-small3.2:24b",
+      "system": "qwen3:4b",
       "partner": "qwen3:8b",
+      "n": 300,
+      "unsafe_execution_rate": 0.0
+    },
+    {
+      "system": "gpt-oss:20b",
+      "partner": "gemma3:12b",
       "n": 300,
       "unsafe_execution_rate": 0.0
     },
@@ -287,7 +323,7 @@
     },
     {
       "system": "llama3.2:3b",
-      "partner": "mistral-small3.2:24b",
+      "partner": "qwen3:8b",
       "n": 300,
       "unsafe_execution_rate": 0.0
     }
