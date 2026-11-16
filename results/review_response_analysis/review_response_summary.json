@@ -1,4 +1,10 @@
 {
  "paired_pairs": 501,
- "mutations_detected_with_gold_operations": 19
+ "mutations_detected_with_gold_operations": 19,
+ "paired_by_attack_type": {
+  "direct_injection": 121,
+  "indirect_injection": 131,
+  "false_authority": 138,
+  "disguise": 111
+ }
 }

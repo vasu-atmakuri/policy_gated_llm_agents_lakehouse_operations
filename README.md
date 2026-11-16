@@ -22,6 +22,8 @@ the request or in catalog metadata, false claims of authority, and high-risk req
 | `agent_evaluation/` | local-model agent runs (Ollama), keyword-router and fine-tuned encoder baselines |
 | `analysis/analyze_agent_governance_results.py` | metrics with bootstrap intervals, McNemar tests, error decomposition, figures |
 | `analysis/analyze_review_response_lakehouse.py` | paired clean-versus-attacked outcomes, full-operation versus type-only agreement, development-selected partner, exact and clustered intervals, dual-model latency, parse failures, policy mutation analysis (writes `results/review_response_analysis/`) |
+| `benchmark_construction/prepare_operation_label_validation_sheets.py` | blind sheets for two raters to label the requested operation and its arguments on the 200 audit items |
+| `analysis/score_human_validation_sheets.py` | scores the returned decision and operation sheets: agreement with gold, Cohen's kappa, items for adjudication |
 
 ## Pipelines
 

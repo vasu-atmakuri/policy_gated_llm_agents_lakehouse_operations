@@ -12,6 +12,8 @@ Outputs  results/review_response_analysis/
   parse_failures.csv                share of agent outputs that could not be parsed
   policy_mutation_detection.csv     validator with one rule removed: unsafe executions it causes on the benchmark
   reasoning_cost.csv                latency and output tokens of Qwen3 with and without reasoning mode
+  paired_subset_representativeness.csv  attacked-request outcomes on paired versus unpaired attack instances
+  unresolved_operation_breakdown.csv    why the misread operations caught only by rule G20 are unresolvable
   review_response_summary.json
 """
 import json
@@ -120,7 +122,7 @@ def main():
                 recs.append({"system": m, "pipeline": pipe, "attack_type": atk, "n_pairs": len(cu),
                              "same_gold_decision": int(sum(rows[a]["gold_decision"] == rows[s]["gold_decision"] for a, s in sub)),
                              "unsafe_clean": cu.mean(), "unsafe_attacked": au.mean(),
-                             "safe_to_unsafe": int(np.sum(~cu & au)), "unsafe_to_safe": int(np.sum(cu & ~au)),
+                             "n_clean_safe": int(np.sum(~cu)), "safe_to_unsafe": int(np.sum(~cu & au)), "unsafe_to_safe": int(np.sum(cu & ~au)),
                              "attack_success_rate": np.sum(~cu & au) / max(1, np.sum(~cu))})
     paired = pd.DataFrame(recs)
     paired.to_csv(OUT / "paired_attack_outcomes.csv", index=False)
@@ -254,6 +256,35 @@ def main():
                    "median_output_tokens": np.median([r.get("output_tokens") or 0 for r in base]),
                    "median_output_tokens_reasoning": np.median([r.get("output_tokens") or 0 for r in recs])})
     pd.DataFrame(rc).to_csv(OUT / "reasoning_cost.csv", index=False)
+
+    # 9. are the 501 paired attacks representative of all 1,185?
+    rep = []
+    att = [i for i in eval_ids if rows[i]["attack_type"] in ATTACKS]
+    paired_ids = {a for a, _ in pairs}
+    for m in llms:
+        for pipe in ["llm_only", "validator_gate"]:
+            for grp, ids in (("paired", [i for i in att if i in paired_ids]), ("unpaired", [i for i in att if i not in paired_ids])):
+                u = [outcome(rows[i], decide(pipe, ops[m][i], parsed[m][i], rows[i], env), ops[m][i])["unsafe_execution"]
+                     for i in ids if i in parsed[m]]
+                rep.append({"system": m, "pipeline": pipe, "group": grp, "n": len(u), "unsafe_attacked": float(np.mean(u)),
+                            "share_reject_gold": float(np.mean([rows[i]["gold_decision"] == "reject" for i in ids]))})
+    pd.DataFrame(rep).to_csv(OUT / "paired_subset_representativeness.csv", index=False)
+    summary["paired_by_attack_type"] = {a: sum(rows[x]["attack_type"] == a for x in paired_ids) for a in ATTACKS}
+
+    # 10. what makes the operations caught only by G20 unresolvable (Mistral Small proposals)
+    import lakehouse_governance_benchmark.policy as policy
+    br = defaultdict(int)
+    m = "mistral-small3.2:24b"
+    for iid in eval_ids:
+        op, inst = ops[m].get(iid), rows[iid]
+        if op is None or op["intent"] == "out_of_scope":
+            continue
+        dec, fired = policy.evaluate_operation(op, inst["context"], env)
+        if fired == ["G20"]:
+            spec_params = policy.OPERATIONS[op["intent"]].params
+            missing = any(op["params"].get(k) in (None, "") for k, kd in spec_params.items() if kd != "predicate")
+            br["missing_or_invalid_argument" if missing else "unknown_resource_or_principal"] += 1
+    pd.DataFrame([{"system": m, "reason": k, "n": v} for k, v in br.items()]).to_csv(OUT / "unresolved_operation_breakdown.csv", index=False)
 
     json.dump(summary, open(OUT / "review_response_summary.json", "w"), indent=1)
     print("done")
