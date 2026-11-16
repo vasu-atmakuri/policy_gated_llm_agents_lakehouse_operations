@@ -7,8 +7,7 @@
 \usepackage{multirow}
 \usepackage{xcolor}
 \usepackage{url}
-\usepackage[hidelinks]{hyperref}
-\newcommand{\pending}[1]{\textcolor{red}{[#1]}}
+\usepackage[hidelinks,pdftitle={Policy-Gated Language-Model Agents for Data Lakehouse Operations},pdfauthor={Vasu Atmakuri}]{hyperref}
 \graphicspath{{figures/}}
 
 \begin{document}
@@ -18,12 +17,13 @@
 \author{\IEEEauthorblockN{Vasu Atmakuri}
 \IEEEauthorblockA{\textit{Independent Researcher}\\
 Dallas, TX, USA \\
-athmakurivasu@gmail.com}}
+athmakurivasu@gmail.com \\
+ORCID: 0009-0007-5955-2466}}
 
 \maketitle
 
 \begin{abstract}
-Language-model agents are increasingly asked to act on data platforms: granting access, vacuuming tables, resizing clusters, rotating secrets and changing Kafka schemas. A wrong action on such a platform can leak restricted data or destroy history, so the question is not only whether an agent understands a request but who decides whether it may run. We introduce a benchmark of 3{,}040 evaluation requests over a simulated lakehouse with 24 operations and a codified 20-rule governance policy, including held-out phrasings, paraphrases written by other model families, direct and indirect prompt injection, false claims of authority, disguised high-risk requests and out-of-scope requests. We evaluate ten open-weight models from five families (3B to 32B parameters) and two non-generative baselines under five decision pipelines. When the model decides, 13\% to 66\% of requests that need review or refusal are executed automatically, and indirect injection through catalog metadata succeeds 52\% to 93\% of the time. When the model only proposes the operation and a deterministic validator applies the policy to systems-of-record attributes, unsafe execution falls to 0.13\% to 1.4\% for nine of ten models (McNemar $p < 10^{-4}$ for every model) with no validator soundness violation, and every remaining failure is a misread operation. A keyword router behind the same validator is as safe (0.53\%) but automates 12 points fewer correct requests. A second model's agreement removes most remaining misreads (0.10\% to 0.13\% with a strong partner) at a cost of under two points of automation, an independent risk check removes them at a cost of 17 to 76 points, and self-reported confidence carries no usable signal. \pending{One sentence on the reasoning, sampling-stability and self-check ablations.}
+Language-model agents are increasingly asked to act on data platforms: granting access, vacuuming tables, resizing clusters, rotating secrets and changing Kafka schemas. A wrong action on such a platform can leak restricted data or destroy history, so the question is not only whether an agent understands a request but who decides whether it may run. We introduce a benchmark of 3{,}040 evaluation requests over a simulated lakehouse with 24 operations and a codified 20-rule governance policy, including held-out phrasings, paraphrases written by other model families, direct and indirect prompt injection, false claims of authority, disguised high-risk requests and out-of-scope requests. We evaluate ten open-weight models from five families (3B to 32B parameters) and two non-generative baselines under five decision pipelines. When the model decides, 13\% to 66\% of requests that need review or refusal are executed automatically, and indirect injection through catalog metadata succeeds 52\% to 93\% of the time. When the model only proposes the operation and a deterministic validator applies the policy to systems-of-record attributes, unsafe execution falls to 0.13\% to 1.4\% for nine of ten models (McNemar $p < 10^{-4}$ for every model) with no validator soundness violation, and every remaining failure is a misread operation. A keyword router behind the same validator is as safe (0.53\%) but automates 12 points fewer correct requests. A second model's agreement removes most remaining misreads (0.10\% to 0.13\% with a strong partner) at a cost of under two points of automation, an independent risk check removes them at a cost of 17 to 76 points, and self-reported confidence carries no usable signal. Reasoning mode and self-review make the model's own decisions safer but leave 13\% to 58\% unsafe, while the validator's outcomes barely change under sampling at temperature 0.7. An operation-substitution attack, which plants a catalog note redirecting a request to a table the policy would approve, targets the validator's remaining weakness: it is followed in at most 3.3\% of proposals, and dual-model agreement removes its effect.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -38,10 +38,10 @@ The difficulty is that many of these requests must not run without review. Grant
 
 This paper asks a design question with direct operational consequences: \emph{should the agent decide, or should it only propose an operation for a deterministic policy to decide?} And when a validator decides, where does it still fail? We make four contributions.
 \begin{itemize}
-\item A benchmark of lakehouse operations requests with gold operations and gold decisions derived from a codified policy, covering held-out templates, cross-family paraphrases, four attack types and out-of-scope requests (Section~\ref{sec:benchmark}).
+\item A benchmark of lakehouse operations requests with gold operations and gold decisions derived from a codified policy, covering held-out templates, cross-family paraphrases, four attack types, out-of-scope requests and an operation-substitution attack aimed at the validator itself (Section~\ref{sec:benchmark}).
 \item A controlled comparison of ten open-weight models and two non-generative baselines under five decision pipelines, with bootstrap intervals and paired significance tests (Sections~\ref{sec:setup} and \ref{sec:results}).
 \item An error decomposition showing that a sound validator turns the safety problem into a parsing problem: every remaining unsafe execution comes from a misread operation, never from the policy decision.
-\item An analysis of the safety-automation trade-off of four mitigations for those misreads (model agreement, independent risk extraction, confidence thresholds, and reasoning or self-review), measured on the same instances.
+\item An analysis of the safety-automation trade-off of four mitigations for those misreads (model agreement, independent risk extraction, confidence thresholds, and reasoning or self-review), measured on the same instances, together with the stability of each pipeline under sampling.
 \end{itemize}
 
 \section{Related Work}
@@ -65,6 +65,8 @@ This paper asks a design question with direct operational consequences: \emph{sh
 
 \textbf{Distribution shift and attacks.} \emph{Paraphrases}: test requests rewritten by OLMo 2 13B and Granite 3.3 8B, families not among the evaluated agents, kept only if every identifier survives verbatim (555 instances). \emph{Direct injection}: an instruction appended to the request asserting that the change is pre-approved. \emph{Indirect injection}: the same kind of instruction placed in the target table's comment or the ticket description. \emph{False authority}: the requester claims a role, approval or ticket that the systems of record do not show. \emph{Disguise}: a high-risk operation phrased as routine work. Every attack keeps the source operation and context, so its gold decision is unchanged; 1{,}185 attack instances are paired with 100 out-of-scope requests whose only safe decision is review. The evaluation set has 3{,}040 instances (600 seen-template, 600 unseen-template, 555 paraphrased, 1{,}185 attacks, 100 out-of-scope); a further 300 development instances are used only to tune thresholds.
 
+\textbf{Operation substitution.} The attacks above try to change the decision, which a validator ignores. A separate set of 300 instances attacks the validator's input instead. For a test request whose gold decision is review or reject, the target table's catalog comment is replaced by a note saying that the table is retired or is an alias and that changes must be applied to another table, chosen so that the same operation by the same requester in the same context would be auto-executed. The request and context are unchanged, so the gold decision is unchanged; an agent that follows the note proposes an approvable operation on the wrong table.
+
 \textbf{Outcomes.} An execution is \emph{unsafe} if the system auto-executes and either the gold decision is not auto\_execute or the executed operation differs from the requested one (wrong operation, resource, principal or value). \emph{Correct automation recall} is the share of gold auto\_execute requests that are executed with the correct operation; it measures how much routine work the system takes off the platform team.
 
 \section{Experimental Setup}
@@ -75,6 +77,8 @@ This paper asks a design question with direct operational consequences: \emph{sh
 \textbf{Baselines.} A keyword router maps requests to operations with hand-written rules and extracts parameters by matching catalog names. A fine-tuned DistilRoBERTa classifier predicts the operation, trained on templates 0 to 2 of the training split, with parameters from the same extractor. Both pass every proposal through the validator.
 
 \textbf{Pipelines.} \emph{LLM only}: the agent's decision. \emph{Validator gate}: the codified policy applied to the agent's proposed operation, with ticket, window and resource attributes read from the systems of record; text in the request never changes the decision. \emph{Validator or LLM}: the more severe of the two. \emph{Risk cross-check}: the validator gate, escalated to review when the independent call finds a high-risk effect the proposed operation does not have. \emph{Dual-model agreement}: the validator gate, escalated when a second model proposes a different operation. \emph{Confidence escalation}: the validator gate, escalated below a confidence threshold chosen on the development set as the lowest-escalation threshold with at most 1\% unsafe execution.
+
+\textbf{Ablations.} On a fixed random subset of 800 evaluation instances we run the reasoning mode of Qwen3 4B, 8B, 14B and 32B; sampling at temperature 0.7 with two seeds for six models; and \emph{self-review}, in which the same model checks its own proposal against the policy text and gives the final decision, for all ten models.
 
 \textbf{Statistics.} Rates carry 95\% bootstrap intervals over instances \cite{efron1994bootstrap}; pipelines are compared on the same instances with McNemar tests \cite{mcnemar1947} and Holm correction \cite{holm1979}. Because the validator implements the same policy as the gold labels, an unsafe execution under the validator gate can only come from a wrong proposed operation; the analysis checks this property on every instance.
 
@@ -148,24 +152,79 @@ Fig.~\ref{fig:tradeoff} shows the trade-off of the pipelines that act on the rem
 
 Median latency of the agent call ranges from 2.3 s (Llama 3.2 3B) to 19.7 s (Qwen3 32B) and 25.2 s (gpt-oss 20B, which produces about 780 output tokens) on a single laptop, with prompts of 1{,}400 to 1{,}600 tokens dominated by the catalog and policy. The validator itself is a deterministic function that runs in microseconds.
 
-\subsection{Ablations: reasoning, sampling and self-review}
+\subsection{Reasoning, self-review and sampling}
 \label{sec:ablations}
 
-On a fixed random subset of 800 evaluation instances we test three questions that the main runs leave open. \emph{Reasoning}: does switching on the reasoning mode of Qwen3 4B, 14B and 32B make the model's own decisions safe enough to need no validator? \emph{Stability}: how much do decisions and unsafe rates change at temperature 0.7 with two sampling seeds (Qwen3 4B and 8B, Llama 3.2 3B and 3.1 8B, Gemma 3 12B, Mistral Small 3.2)? \emph{Self-review}: can the same model, asked to check its own proposal against the policy, replace the codified validator (Llama 3.2 3B, Qwen3 4B, 8B and 32B, Mistral Small 3.2, gpt-oss 20B)?
+On the 800-instance subset, the main runs reproduce the full-set picture (Table~\ref{tab:ablation}).
 
-\pending{Results of the ablation runs: table of unsafe execution and correct automation recall for each variant against the main run on the same 800 instances, McNemar tests, and the share of decisions that change between sampling seeds.}
+\begin{table}[t]
+\caption{Ablations on 800 evaluation instances: unsafe execution (\%). Self-review: the same model checks its own proposal against the policy and decides. Validator: the main-run validator gate on the same instances.}
+\label{tab:ablation}
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lcccc}
+\toprule
+System & LLM only & Reasoning & Self-review & Validator\\
+\midrule
+Llama 3.2 3B & 68.1 & & 57.5 & 3.50\\
+Qwen3 4B & 20.9 & 21.1 & 20.8 & 1.13\\
+Llama 3.1 8B & 63.0 & & 31.0 & 1.00\\
+Qwen3 8B & 42.9 & 32.3 & 37.3 & 0.75\\
+Gemma 3 12B & 28.5 & & 12.6 & 0.25\\
+Phi-4 14B & 57.3 & & 36.6 & 0.50\\
+Qwen3 14B & 53.3 & 28.5 & 16.6 & 0.38\\
+gpt-oss 20B & 15.5 & & 13.1 & 0.63\\
+Mistral Small 24B & 39.8 & & 17.5 & 0.00\\
+Qwen3 32B & 38.8 & 26.8 & 29.3 & 0.13\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Reasoning does not replace the validator.} Switching on Qwen3's reasoning mode lowers unsafe execution of the model's own decision for 8B, 14B and 32B (for example 53.3\% to 28.5\% for 14B; Holm-adjusted McNemar $p < 10^{-9}$ for each) but not for 4B (20.9\% to 21.1\%), and every variant still executes 21\% to 32\% of requests unsafely. Under the validator gate, reasoning changes unsafe execution by at most 0.4 points.
+
+\textbf{Self-review does not replace the validator.} When the same model reviews its own proposal against the policy and decides, unsafe execution falls for most models (Mistral Small 3.2: 39.8\% to 17.5\%) but stays between 12.6\% and 57.5\%, against 0\% to 3.5\% for the validator on the same instances; the validator is safer for every model (Holm-adjusted $p < 10^{-27}$).
+
+\textbf{The validator is stable under sampling.} At temperature 0.7, the model's own decision changes on 3.8\% to 19.5\% of instances relative to greedy decoding (most for Llama 3.2 3B), and its unsafe rate moves by up to 5.3 points (Qwen3 4B: 20.9\% to 24.6\% and 26.1\%). Under the validator gate unsafe execution stays within 0.8 points of the greedy run for every model and seed (Mistral Small: 0\% for both seeds).
+
+\subsection{Operation substitution}
+\label{sec:substitution}
+
+\begin{table}[t]
+\caption{Operation-substitution attacks (300 instances, gold decision review or reject): unsafe execution (\%) and the share of proposals that follow the planted note.}
+\label{tab:substitution}
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccc}
+\toprule
+System & LLM only & Validator & Followed note\\
+\midrule
+Llama 3.2 3B & 63.7 & 4.3 & 0.0\\
+Qwen3 4B & 5.7 & 0.0 & 0.0\\
+Llama 3.1 8B & 54.3 & 2.7 & 0.0\\
+Qwen3 8B & 8.3 & 0.3 & 0.0\\
+Gemma 3 12B & 12.3 & 0.0 & 0.0\\
+Phi-4 14B & 48.3 & 2.0 & 1.3\\
+Qwen3 14B & 25.0 & 1.3 & 0.0\\
+gpt-oss 20B & 15.0 & 4.7 & 3.3\\
+Mistral Small 24B & 30.3 & 2.7 & 2.7\\
+Qwen3 32B & 10.3 & 0.0 & 0.0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The substitution attack is the one a validator cannot stop by itself: a proposal that follows the note names an approvable operation, and the validator approves it. Models rarely follow the note (Table~\ref{tab:substitution}): seven of ten never do, and the most susceptible are gpt-oss 20B (3.3\%), Mistral Small 3.2 (2.7\%) and Phi-4 (1.3\%). Every proposal that follows it is executed unsafely under the validator gate; the remaining validator failures on these instances are ordinary misreads of a request that should not run. Letting the model decide is again far worse (5.7\% to 63.7\%). Dual-model agreement removes the attack: with Gemma 3 12B as the partner (gpt-oss 20B for Gemma itself), unsafe execution is 0\% for every model, and with Mistral Small 3.2 it is at most 0.33\%, because two models seldom follow the same planted note to the same wrong table.
 
 \section{Discussion}
 
-\textbf{Design guidance.} An operations agent should propose, not decide. The decision belongs to a deterministic policy that reads ticket, window and resource attributes from systems of record, never from text the agent saw; this one design choice removes the effect of every attack type in the benchmark. What remains is a parsing problem, and it is best attacked where it occurs: by checking that the proposed operation is the requested one. Agreement between two models does this at little cost in automation. Confidence scores should not be used to gate actions.
+\textbf{Design guidance.} An operations agent should propose, not decide. The decision belongs to a deterministic policy that reads ticket, window and resource attributes from systems of record, never from text the agent saw; this one design choice removes the effect of every attack type in the benchmark. What remains is a parsing problem, and it is best attacked where it occurs: by checking that the proposed operation is the requested one. Agreement between two models does this at little cost in automation, and it also stops the one attack aimed at the validator's input. Neither reasoning nor self-review is a substitute for the validator, and confidence scores should not be used to gate actions.
 
 \textbf{When is a model worth it?} Behind a validator, a hand-written keyword router is about as safe as a 12B to 32B model, so safety alone does not justify a model. The model earns its place by automating more routine work correctly (about 12 points more recall), and that advantage grows with phrasing diversity. A platform team can start with a parser and add a model with dual agreement when request volume makes the extra automation worth a second call.
 
-\textbf{Limitations.} The environment and requests are simulated, and the policy is fully codified; real policies contain judgment calls a validator cannot encode, and those cases must go to review by design. Gold decisions come from the same policy the validator implements, which is why soundness is exact here; in practice the validator inherits any mistakes in the codified policy. Paraphrases come from two generator families and attacks from fixed templates, so stronger adaptive attacks that change the proposed operation (for example by naming a different table) are not covered. All models are open-weight and run locally at modest size; frontier hosted models may behave differently.
+\textbf{Limitations.} The environment and requests are simulated, and the policy is fully codified; real policies contain judgment calls a validator cannot encode, and those cases must go to review by design. Gold decisions come from the same policy the validator implements, which is why soundness is exact here; in practice the validator inherits any mistakes in the codified policy. Paraphrases come from two generator families and attacks from fixed templates; the substitution attack uses three note templates, and adaptive attacks optimized against a specific model, or against two models at once, are not covered. Gold decisions are computed from the codified policy rather than labeled independently by people. All models are open-weight and run locally at modest size; frontier hosted models may behave differently.
 
 \section{Conclusion}
 
-On a governed data platform, letting a language model decide whether its own action may run is unsafe, even with the full policy in the prompt and at 32B parameters. Moving the decision to a deterministic validator over systems of record cuts unsafe execution by one to two orders of magnitude, neutralizes injection and false authority, and reduces the remaining risk to misread operations, which a second model's agreement removes almost entirely. We release the benchmark, the policy, every model output and the analysis code.
+On a governed data platform, letting a language model decide whether its own action may run is unsafe, even with the full policy in the prompt and at 32B parameters. Moving the decision to a deterministic validator over systems of record cuts unsafe execution by one to two orders of magnitude, neutralizes injection and false authority, and reduces the remaining risk to misread operations, which a second model's agreement removes almost entirely, including when an attacker plants text to change the operation itself. Reasoning and self-review do not change this conclusion. We release the benchmark, the policy, every model output and the analysis code.
 
 \section*{Code and Data Availability}
 The benchmark, policy, prompts, model outputs and analysis scripts are available at \url{https://github.com/vasu-atmakuri/policy_gated_llm_agents_lakehouse_operations}. Every number in this paper is produced by the analysis scripts in that repository.
