@@ -1,0 +1,5 @@
+system,median_latency_s,median_latency_reasoning_s,median_output_tokens,median_output_tokens_reasoning
+qwen3:4b,4.8245000000000005,75.18799999999999,176.0,2551.5
+qwen3:8b,6.463,20.1665,102.5,493.0
+qwen3:14b,7.9445,34.2855,101.0,557.0
+qwen3:32b,19.991,69.896,116.0,465.0

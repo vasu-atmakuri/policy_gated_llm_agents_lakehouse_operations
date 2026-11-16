@@ -21,6 +21,7 @@ the request or in catalog metadata, false claims of authority, and high-risk req
 | `benchmark_construction/` | builds `data/`; generates the paraphrase split with local generator models |
 | `agent_evaluation/` | local-model agent runs (Ollama), keyword-router and fine-tuned encoder baselines |
 | `analysis/analyze_agent_governance_results.py` | metrics with bootstrap intervals, McNemar tests, error decomposition, figures |
+| `analysis/analyze_review_response_lakehouse.py` | paired clean-versus-attacked outcomes, full-operation versus type-only agreement, development-selected partner, exact and clustered intervals, dual-model latency, parse failures, policy mutation analysis (writes `results/review_response_analysis/`) |
 
 ## Pipelines
 
@@ -47,6 +48,7 @@ python agent_evaluation/run_keyword_router_baseline.py
 python agent_evaluation/run_finetuned_encoder_baseline.py
 python agent_evaluation/run_local_model_agent_evaluation.py --concurrency 4
 python analysis/analyze_agent_governance_results.py
+python analysis/analyze_review_response_lakehouse.py
 ```
 
 Agent runs are resumable; finished calls are skipped on restart.
