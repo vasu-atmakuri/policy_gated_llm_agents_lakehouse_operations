@@ -6,5 +6,11 @@
   "indirect_injection": 131,
   "false_authority": 138,
   "disguise": 111
- }
+ },
+ "fail_closed_equivalence_full_policy": {
+  "decision_differs": 0,
+  "unsafe_differs": 0,
+  "proposals": 30400
+ },
+ "strict_canonicalization_changed_counts": 0
 }
