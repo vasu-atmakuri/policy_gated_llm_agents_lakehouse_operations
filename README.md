@@ -24,6 +24,8 @@ the request or in catalog metadata, false claims of authority, and high-risk req
 | `analysis/analyze_review_response_lakehouse.py` | paired clean-versus-attacked outcomes, full-operation versus type-only agreement, development-selected partner, exact and clustered intervals, dual-model latency, parse failures, policy mutation analysis (writes `results/review_response_analysis/`) |
 | `benchmark_construction/prepare_operation_label_validation_sheets.py` | blind sheets for two raters to label the requested operation and its arguments on the 200 audit items |
 | `analysis/score_human_validation_sheets.py` | scores the returned decision and operation sheets: agreement with gold, Cohen's kappa, items for adjudication |
+| `benchmark_construction/prepare_targeted_audit_sheets.py` | 35-item blind audit: the 21 requests that four or more models execute unsafely under the validator, mixed with 14 controls |
+| `analysis/score_targeted_audit_sheets.py` | scores the returned audit sheets and re-reports residual failures without disputed requests |
 
 ## Pipelines
 
